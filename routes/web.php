@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// cek cek kok ini belum ada 
+// blablabla
 Route::get('/', 'AppController@index');
 
 Auth::routes();
