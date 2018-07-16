@@ -10,5 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// cek cek kok ini belum ada 
 Route::get('/', 'AppController@index');
