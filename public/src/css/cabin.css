@@ -1,0 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+body {
+	font:13px/20px 'Cabin', Helvetica, Arial, sans-serif;
+	color: #555;
+	-webkit-font-smoothing: antialiased !important;	
+}
