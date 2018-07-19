@@ -1,6 +1,7 @@
-@extends('layouts.app')
-
-@section('content')
+{{-- extend layout admin --}}
+@extends('layouts.admin')
+{{-- isi konten halaman  --}}
+@section('admin-content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
