@@ -1107,6 +1107,7 @@ input.dateinput {
 #logo {
 		text-align:center;
 		background: url(../img/logo-mobile.png) center top no-repeat;
+		max-width: 100%;
 		height:45px;
 		margin-bottom:10px;
 }
@@ -1137,7 +1138,7 @@ nav, footer, #features{
 }	
 
 /* Mobile portrait */
-@media (max-width: 480px) {
+@media (max-width: 100%) {
 	#logo {
 		text-align:center;
 		background: url(../img/logo-mobile.png) center top no-repeat;

@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
         <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon-57x57-precomposed.png')}}" type="image/x-icon" />
         <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png')}}" sizes="72x72" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png')}}" type="image/x-icon" sizes="114x114" />
+		<link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png')}}" type="image/x-icon" sizes"114x114" />
 		
 		<!-- Mobile Specific Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@
 	<header>
 	<div class="container">
    	  <div class="row">
-    	<div class="span5" id="logo"><a href=""><img src="{{asset('img/logo.png')}}" alt="Logo"></a></div>
+    	<div class="span5" id="logo"><a href="#"><img src="{{asset('img/logo.png')}}"  alt="Logo" ></a></div>
 
         </div><!-- End row-->
 	</div><!-- End container-->
@@ -63,7 +63,7 @@
 			<!-- Begin Mega Menu Container -->
 			<ul class="megamenu">
 				<!-- Begin Mega Menu -->
-				<li><a href="javascript:void(0)" class="nodrop-down">Home</a>
+				<li><a class="nodrop-down" href="{{route('index')}}">Home</a>
 				<li><a href="javascript:void(0)" class="drop-down">Profil</a>
 				<!-- Begin Item -->
 				<div class="drop-down-container">
@@ -85,7 +85,7 @@
 									
 										<div class="span3">
 											<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-											<p><a href="#" class="button_red_small" title="staff">Read more</a></p>
+											<p><a href="{{route('sejarah')}}" class="button_red_small" title="staff">Read more</a></p>
 										</div>
 										
 																	  
@@ -136,7 +136,7 @@
 											<p><img src="img/teacher-small.jpg" class="img-rounded shadow" alt=""></p>
 
 											<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-											<p><a href="#" class="button_red_small" title="kepala kantor">Read more</a></p>
+											<p><a href="{{route('kakanim')}}" class="button_red_small" title="kepala kantor">Read more</a></p>
 										</div>                                
 									</div><!-- End row -->
 									</li>
@@ -148,8 +148,7 @@
 											<p><img src="img/teacher-small.jpg" class="img-responsif" alt=""></p>
 										</div>  
 										<div class="span3">
-										<p>jkljalkjakljlka jlkajklajklj.</p>
-											<p><a href="#" class="button_red_small" title="struktur organisasi">Read more</a></p>
+											<p>jkljalkjakljlka jlkajklajklj.</p>
 										</div>
 									</div>
 									<!-- End row -->
@@ -170,24 +169,24 @@
 						<div class="span12">
 							<div class="row">
 								<div class="span3">
-									<h5><a href="#"><i class="icon-book"></i>Layanan Warga Negara Indonesia</a></h5>
+									<h5><a href="{{route('wni')}}"><i class="icon-book"></i>Layanan Warga Negara Indonesia</a></h5>
 									<p>bla bla bla.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('wni')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
-									<h5><a href="#"><i class="icon-book"></i>Layanan Warga Negara Asing</a></h5>
+									<h5><a href="{{route('wna')}}"><i class="icon-book"></i>Layanan Warga Negara Asing</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('wna')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span2">
-									<h5><a href="#"><i class="icon-book"></i>Layanan Online</a></h5>
+									<h5><a href="{{route('layananonline')}}"><i class="icon-book"></i>Layanan Online</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('layananonline')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span2">
-									<h5><a href="#"><i class="icon-book"></i>Biaya Keimigrasian</a></h5>
+									<h5><a href="{{route('biaya')}}"><i class="icon-book"></i>Biaya Keimigrasian</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('biaya')}}" class="button_red_small">Read more</a></p>
 								</div>
 							</div><!-- End row -->
 							
@@ -201,8 +200,8 @@
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
 						<div class="span2"></div>
-						<div class="span4 "><a href="#" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
-						<div class="span4"><a href="#" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
+						<div class="span4 "><a href="{{route('beritautama')}}" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
+						<div class="span4"><a href="{{route('beritaimigrasi')}}" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
@@ -215,25 +214,25 @@
 						<div class="span12">
 							<div class="row">
 								<div class="span2">
-									<h5><a href="#"><i class="icon-book"></i>Undang-Undang</a> </h5>
+									<h5><a href="{{route('uu')}}"><i class="icon-book"></i>Undang-Undang</a> </h5>
 									<p>bla bla bla.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('uu')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
-									<h5><a href="#"><i class="icon-book"></i>Presiden</a></h5>
+									<h5><a href="{{route('presiden')}}"><i class="icon-book"></i>Presiden</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('presiden')}}"class="button_red_small">Read more</a></p>
 								</div>
 					   
 								<div class="span2">
-									<h5><a href="#"><i class="icon-book"></i>Permeintah</a></h5>
+									<h5><a href="{{route('pemerintah')}}"><i class="icon-book"></i>Pemerintah</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('pemerintah')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
-									<h5><a href="#"><i class="icon-book"></i>Menteri</a></h5>
+									<h5><a href="{{route('menteri')}}"><i class="icon-book"></i>Menteri</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-									<p><a href="#" class="button_red_small">Read more</a></p>
+									<p><a href="{{route('menteri')}}" class="button_red_small">Read more</a></p>
 								</div>
 							</div><!-- End row -->
 							
@@ -246,9 +245,9 @@
 				<!-- Begin Item -->
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
-						<div class="span3 "><a href="#" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
-						<div class="span4"><a href="all-courses.html" title="Kepuasan Masyarakat"><i class="icon-star icon-3x"></i>Indeks Kepuasan Masyarakat </a></div>
-						<div class="span3"><a href="course-detail.html" title="Course detail"><i class="icon-list icon-3x"></i>Data Statistik</a></div>
+						<div class="span3 "><a href="{{route('galeri')}}" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
+						<div class="span4"><a href="{{route('kepuasan')}}" title="Kepuasan Masyarakat"><i class="icon-star icon-3x"></i>Indeks Kepuasan Masyarakat </a></div>
+						<div class="span3"><a href="{{route('statistik')}}" title="Course detail"><i class="icon-list icon-3x"></i>Data Statistik</a></div>
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
@@ -260,13 +259,14 @@
 					<div class="row">
 					
 						<div class="span6">
-							<div id="map_1"></div>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.639222030405!2d119.87964738610843!3d-0.9059189403642333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bee74ad13d239%3A0xda2d3af5ffbb743e!2sKantor+Imigrasi+Kelas+I+-+Palu!5e0!3m2!1sid!2sid!4v1532348334676" height="300" frameborder="0" style="border:0" allowfullscreen>
+                			</iframe>
 						</div>
 						
 						<div class="span4">
 							<h4>Alamat</h4>
 							<ul>
-								<li><i class="icon-home"></i> Jl. Ra Kartini No 53, Lolu Selatan, Palu Selatan, Kota Palu, Sulawesi Tengah 94111</li>
+								<li><i class="icon-home"></i> Jl. RA Kartini No 53, Lolu Selatan, Palu Selatan, Kota Palu, Sulawesi Tengah 94111</li>
 								<li><i class="icon-phone"></i> Telephone: + 62 45142 1433</li>
 								<li><i class="icon-phone-sign"></i> Fax: + 62 455 279 </li>
 								<li><i class="icon-envelope"></i> Email: <a href="#">immigration.palu@gmail.com</a></li>
@@ -279,7 +279,7 @@
 								<div class="span3">
 									<h5>Pengaduan</h5>
 									<p>Apabila Anda menemukan kecurangan, pungli dalam pelayanan kami, silahkan laporkan melalui fitur ini</p>
-									<p><a href="#" class="button_red_small">Laporkan</a></p>
+									<p><a href="{{route('contact')}}" class="button_red_small">Laporkan</a></p>
 								</div>                       
 							</div><!-- End row -->
 						</div><!-- End Span6 -->
@@ -307,11 +307,11 @@
 				<div class="span3" id="contacts-footer">
 					<h4>Alamat</h4>
 						<ul>
-						<li><i class="icon-home"></i> Jl. Ra Kartini No. 53, Lolu Selatan, Palu Selatan, Kota Palu, Sulawesi Tengah 94111</li>
-						<li><i class="icon-phone"></i> Telephone: + 62 45142 1433</li>
-						<li><i class="icon-phone-sign"></i> Fax: + 62 455 279</li>
-						<li><i class="icon-envelope"></i> Email: <a href="#">immigration.palu@gmail.com</a></li>
-							</ul>
+							<li><i class="icon-home"></i> Jl. Ra Kartini No. 53, Lolu Selatan, Palu Selatan, Kota Palu, Sulawesi Tengah 94111</li>
+							<li><i class="icon-phone"></i> Telephone: + 62 45142 1433</li>
+							<li><i class="icon-phone-sign"></i> Fax: + 62 455 279</li>
+							<li><i class="icon-envelope"></i> Email: <a href="#">immigration.palu@gmail.com</a></li>
+						</ul>
 					<hr>
 				   
 					<div></div>
@@ -321,12 +321,12 @@
 				<div class="span3" id="quick-links">
 					<h4>Links Instansi</h4>
 					<ul>
-						<li><a href="https://kemenkumham.go.id/" >Kementerian Hukum dan HAM</a></li>
-						<li><a href="http://imigrasi.go.id/" >Direktorat Jenderal Imigrasi</a></li>
-						<li><a href="http://www.politeknikimigrasi.ac.id/" >Politeknik Keimigrasian</a></li>
-						<li><a href="https://www.kejaksaan.go.id/" >Kejaksaan Republik Indonesia</a></li>
-						<li><a href="https://www.kemlu.go.id/id/" >Kementerian Luar Negeri</a></li>
-						<li><a href="https://www.kpk.go.id/id/" >Komisi Pemberantasan Korupsi</a></li>
+						<li><a href="https://kemenkumham.go.id/" ><img src="{{asset('img/kemenkumham.jpg')}}" alt="Logo"></a></li>
+						<li><a href="http://imigrasi.go.id/" ><img src="{{asset('img/ditjen.jpg')}} "alt="Logo"></a></li>
+						<li><a href="http://www.politeknikimigrasi.ac.id/" ><img src="{{asset('img/aim.jpg')}}" alt="Logo"></a></li>
+						<li><a href="https://www.kejaksaan.go.id/" ><img src="{{asset('img/kejaksaan.jpg')}}" alt="Logo" ></a></li>
+						<li><a href="https://www.kemlu.go.id/id/" ><img src="{{asset('img/deplu.jpg')}}" alt="Logo"></a></li>
+						<li><a href="https://www.kpk.go.id/id/" ><img src="{{asset('img/kpk.jpg')}}" alt="Logo"></a></li>
 						
 					</ul>
 				</div>
@@ -355,42 +355,6 @@
 		 <script type="text/javascript" src="{{asset('rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 		 <script src="{{asset('js/revolutio-slider-func.js')}}"></script>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-					
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-        </div>
+		
     </body>
 </html>
