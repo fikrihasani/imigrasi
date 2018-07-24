@@ -133,22 +133,27 @@
          </section><!--End slider-->
  
  
-         <div class="span15"></div> <!-- biar tengah, span 0.5 sebenarnya-->
+         <!--<div class="span15"></div>  biar tengah, span 0.5 sebenarnya-->
  
               <div class="row" id="main-boxes">
                  <div class="span3">
                      <div class="box-style-2 orange">
-                         <a href="#" title="layanan wni">
+                         <a href="{{route('wni')}}" title="layanan wni">
                              <h4 align="Center">Layanan Warga Negara Indonesia</h4>
                          </a>
                      </div>
                  </div>
-                 
- 
-                 
-                 <div class="span3">
+                  <div class="span3">
                      <div class="box-style-2 orange">
-                         <a href="#" title="Layanan Online">
+                         <a href="{{route('wna')}}" title="Layanan WNA">
+                             <h4 align="Center">Layanan Warga Negara Asing</h4>
+                         </a>
+                     </div>
+                 </div>    
+        
+                 <div class="span25">
+                     <div class="box-style-2 orange">
+                         <a href="{{route('layananonline')}}" title="Layanan Online">
                              <h4 align="Center">Layanan Online</h4>
                              </br>			
                          </a>
@@ -157,82 +162,59 @@
                  
                   <div class="span3">
                      <div class="box-style-2 orange">
-                         <a href="#" title="Biaya Keimigrasian">
+                         <a href="{{route('biaya')}}"title="Biaya Keimigrasian">
                              <h4 align="Center">Biaya Keimigrasian</h4>
                              </br>
                          </a>
                      </div>
                  </div>
-                 <div class="span3">
-                     <div class="box-style-2 orange">
-                         <a href="#" title="Layanan WNA">
-                             <h4 align="Center">Layanan Warga Negara Asing</h4>
-                         </a>
-                     </div>
-                 </div>
              </div>
- 
- 
- 
  
          <div class="container">
-         <div class="row">
-             <aside class="span1"></aside>
-             <aside  class="span3 ">
-             
-                     <div class="box-style-1 ribbon borders">
-                     
-                     <div class="feat">
-                       <i class="icon-group icon-3x"></i>
-                       <h3>Jam Pelayanan</h3>
-                       <p>				
-                         Senin - Kamis : 07.30 - 16.00 WITA <br/>
-                         Istirahat	  : 12.00 - 13.00 WITA <br/>
-                         Jumat         : 07.30 - 16.30 WITA <br/>
-                         Istirahat     : 11.30 - 13.00 WITA 
-                       </p>
-                     </div>
-                     
-                     <hr class="double">
- 
-                     </div>
-                     <p><a  href="https://apoa.imigrasi.go.id/poa/" title="Apoa"><img src="img/apoa.jpg" alt="Banner" class="img-rounded" height="420" width="300"></a></p>
-             </aside>
-             <aside  class="span3 ">
-             
-                     <div class="box-style-1 ribbon borders">
-                     
-                     <div class="feat">
-                       <i class="icon-group icon-3x"></i>
-                       <h3>xxxxx</h3>
-                       <p>
-                       An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei
-                       </p>
-                     </div>
-                     
-                     <hr class="double">
-                     
-                    
-                     </div>
-                     <p><a  href="#" title="All courses"><img src="img/banner.jpg" alt="Banner" class="img-rounded" ></a></p>
-             </aside>
-             <aside  class="span3 ">
-             
-                     <div class="box-style-1 ribbon borders">
-                     
-                     <div class="feat">
-                       <i class="icon-group icon-3x"></i>
-                       <h3>xxxxx</h3>
-                       <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-                     </div>
-                     
-                     <hr class="double">
-                     
-                    
-                     </div>
-                     <p><a  href="https://antrian.imigrasi.go.id/" title="Antrian Online"><img src="img/online.jpg" alt="Banner" class="img-rounded" height="270" width="300"></a></p>
-             </aside>
-             </div>
-            </div><!-- end container-->
+			 <div class="row">
+				 <aside class="span1"></aside>
+				 <aside  class="span4 ">
+						<div class="box-style-1 ribbon borders">
+							 <table class="table table-bordered table-striped">
+								<thead>
+									<tr>								
+										<th>Jam Kerja</th>
+										<th>Pukul</th>
+										<th>S/d</th>				
+									</tr>
+								</thead>
+							
+								<tbody>
+									<tr>
+										<td>Senin - Kamis</td>
+										<td>07.30</td>
+										<td>16.00</td>
+									</tr>
+									<tr>
+										<td>Istirahat</td>
+										<td>12.00</td>
+										<td>13.00</td>
+									</tr>
+									<tr>
+										<td>Jumat</td>
+										<td>7.30</td>
+										<td>16.30</td>
+									</tr>
+									<tr>
+										<td>Istirahat</td>
+										<td>11.30</td>
+										<td>13.00</td>
+									</tr>
+								</tbody>
+							</table>
+                            <br/>
+                            <p><a  href="https://antrian.imigrasi.go.id/" title="Antrian Online"><img src="img/online.jpg" alt="Banner" class="img-rounded" height="270" width="300"></a></p>
+							<br/>
+						    <p><a  href="https://apoa.imigrasi.go.id/poa/" title="Apoa"><img src="img/apoa.jpg" alt="Banner" class="img-rounded" height="420" width="300"></a></p>
+				 
+						</div>
+				</aside>
+			</div>
+        </div><!-- end container-->
     
 @endsection

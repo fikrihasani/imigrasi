@@ -16,8 +16,8 @@ CSS STRUCTURE:
 /*============================================================================================*/
 
 .megamenu_container {
-	width:1200px;
-	height:44px;
+	max-width:100%;
+	height:auto;
 	margin:0 auto;
 	position:relative;
 	z-index:2;
@@ -117,7 +117,7 @@ CSS STRUCTURE:
 	z-index:9998;
 	float:left;
 	color:#fff;
-	width: 1170px;
+	width: 100%;
 	margin:0 0 40px 0;
 	padding:30px 15px 0px 15px;
 	-webkit-border-bottom-right-radius: 5px;
