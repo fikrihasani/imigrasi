@@ -34,6 +34,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <a href="/berita">
+                            <li>
+                                Berita
+                            </li>
+                        </a>
 
                     </ul>
 
@@ -71,7 +76,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 container">
+            @include('layouts.pesan')
             @yield('admin-content')
         </main>
     </div>

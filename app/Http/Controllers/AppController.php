@@ -11,10 +11,6 @@ class AppController extends Controller
         return view('app.index');
     }
 
-    public function pengaduan(){
-        return view('app.pengaduan');
-    }
-
     public function profile(){
         return view('profile');
     }

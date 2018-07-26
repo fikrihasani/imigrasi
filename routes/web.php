@@ -10,12 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// blablabla
+
+// Halaman awal
 Route::get('/', 'AppController@index');
-
+// Authentication (login)
 Auth::routes();
-
+// untuk CRUD berita
+Route::resource('berita', 'BeritaController');
+// untuk halaman admin
 Route::get('/home', 'HomeController@index')->name('home');
+// untuk halaman tampilan depan
 Route::get('/index', 'AppController@index')->name('index');
 Route::get('/sejarah', 'AppController@sejarah')->name('sejarah');
 Route::get('/kakanim', 'AppController@kakanim')->name('kakanim');
