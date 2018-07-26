@@ -69,7 +69,7 @@ class BeritaController extends Controller
         $berita->foto_berita = $fileNameToStore;
         $berita->save();
 
-        return redirect('/berita')->with('Success', 'Berita telah ditambahkan');
+        return redirect('/berita')->with('success', 'Berita telah ditambahkan');
     }
 
     /**
@@ -93,35 +93,8 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        //
-                //rule buat data yang diupload
-        $this->validate($request,[
-            'judul_berita' => 'required', 
-            'konten_berita' => 'required', 
-            'tipe_berita' => 'required',
-            'foto_berita' => 'image|nullable|max:1999'
-        ]);
-        // cek apakah data  memiliki foto 
-        if ($request->hasFile('foto_berita')) {
-            // dapatkan filename dengn extension
-            $fileNameWithExt = $request->file('foto_berita')->getClientOriginalName;
-            // dapatkan hanya filename saja
-            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-            // dapatkan hanya extension saja 
-            $fileExt = $request->file('foto_berita')->getClientOriginalExtension;
-            // nama file untuk disimpan
-            $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
-            // upload gambar
-            $path = $request->file('cover_image')->storeAs('public/foto_berita',$fileNameToStore);
-        }else{
-            $fileNameToStore = 'noimage.jpg';
-        }
         $berita = Berita::find($id);
-        $berita->judul_berita = $request->input('judul_berita');
-        $berita->konten_berita = $request->input('konten_berita');
-        $berita->tipe_berita = $request->input('tipe_berita');
-        $berita->foto_berita = $fileNameToStore;
-        $berita->save();
+        return view('admin.berita.edit')->with('berita',$berita);
     }
 
     /**
@@ -153,8 +126,6 @@ class BeritaController extends Controller
                     $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
                     // upload gambar
                     $path = $request->file('cover_image')->storeAs('public/foto_berita',$fileNameToStore);
-                }else{
-                    $fileNameToStore = 'noimage.jpg';
                 }
                 $berita = Berita::find($id);
                 $berita->judul_berita = $request->input('judul_berita');
@@ -164,7 +135,8 @@ class BeritaController extends Controller
                     $berita->foto_berita = $fileNameToStore;
 
                 }
-                $post->save();
+                $berita->save();
+                return redirect('/berita')->with('success', 'Berita telah diperbaharui');
     }
 
     /**
@@ -176,5 +148,8 @@ class BeritaController extends Controller
     public function destroy($id)
     {
         //
+        $berita = Berita::find($id);
+        $berita->delete();
+        return redirect('/berita')->with('success', 'Berita telah dihapus');
     }
 }

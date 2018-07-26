@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 <?php
-    $i = 0;
+    $i = 1;
 ?>
 @section('admin-content')
     <div class="container">
@@ -31,10 +31,14 @@
                     <td>{{$berita->created_at}}</td>
                     <td>{{$berita->updated_at}}</td>
                     <td>
-                        <a href="/berita/edit/{{$berita->id}}"><button class="btn btn-primary">Edit</button></a>
-                        <a href="/berita/destroy/{{$berita->id}}"><button class="btn btn-warning">Hapus</button></a>
+                        <a href="/berita/{{$berita->id}}/edit"><button class="btn btn-primary">Edit</button></a>
+                        {!!Form::open(['action'=>['BeritaController@destroy', $berita->id], 'method'=>'POST'])!!}
+                            {{Form::hidden('_method','DELETE')}}
+                            {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
+                        {!!Form::close()!!}
                         <a href="/berita/{{$berita->id}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
+                    <?php $i++;?>
                     @endforeach
                 </tr>
             </table>
@@ -43,9 +47,6 @@
                 <h2>
                     Belum ada berita 
                 </h2>
-                <a href="/berita/create">
-                    <button class="btn btn-primary">Buat Baru</button>
-                </a>
             </center>
         @endif
     </div>
