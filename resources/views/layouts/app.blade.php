@@ -50,7 +50,7 @@
 	<header>
 	<div class="container">
    	  <div class="row">
-    	<div class="span5" id="logo"><a href="#"><img src="{{asset('img/logo.png')}}"  alt="Logo" ></a></div>
+    	<div class="span6" id="logo"><a href="#"><img src="{{asset('img/logo.png')}}"  alt="Logo" ></a></div>
 
         </div><!-- End row-->
 	</div><!-- End container-->
@@ -83,8 +83,8 @@
 									<li class="active" id="section-1">
 									<div class="row">
 									
-										<div class="span3">
-											<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+										<div class="span8">
+											<p align="justify">Kantor Imigrasi Kelas I Palu terletak di Ibu Kota Propinsi Sulawesi Tengah, dibentuk  berdasarkan Surat Keputusan Menteri Kehakiman Republik Indonesia Nomor : Y.S.4/2/21 Tahun 1976 tanggal 11 Maret 1976 melalui usul Pemerintah Daerah (Gubernur Kepala Daerah Propinsi Sulawesi Tengah), kepada Menteri Kehakiman Republik Indonesia Nomor : Ditpem 1/6/49a tanggal 11 Maret 1974 dan Kantor Imigrasi Palu diresmikan oleh Direktur Jenderal Imigrasi Bapak S. Soedarman pada tanggal 4 April 1977 atas permintaan Surat Kepala Kantor Wilayah Direktorat Jenderal Imigrasi Ujung Pandang Nomor : 2039/IX/C/77 tanggal 28 Febuari 1977.</p>
 											<p><a href="{{route('sejarah')}}" class="button_red_small" title="staff">Read more</a></p>
 										</div>
 										
@@ -317,7 +317,7 @@
 					<div></div>
 					
 				</div>
-					
+				
 				<div class="span3" id="quick-links">
 					<h4>Links Instansi</h4>
 					<ul>
