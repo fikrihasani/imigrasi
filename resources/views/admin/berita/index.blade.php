@@ -24,8 +24,8 @@
                     <td>Diupdate Pada</td>
                     <td>Aksi</td>
                 </tr>
-                <tr>
-                    @foreach ($berita2 as $berita)
+                @foreach ($berita2 as $berita)
+                    <tr>
                     <td>{{$i}}</td>
                     <td>{{$berita->judul_berita}}</td>
                     <td>{{$berita->created_at}}</td>
@@ -39,8 +39,8 @@
                         <a href="/berita/{{$berita->id}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
-                    @endforeach
                 </tr>
+                @endforeach
             </table>
         @else
             <center>
