@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2018 at 07:04 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.7
+-- Generation Time: Jul 26, 2018 at 10:04 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,11 +29,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `berita` (
-  `foto_utama` int(20) NOT NULL,
-  `berita_utama` text NOT NULL,
-  `foto_imigrasi` int(20) NOT NULL,
-  `berita_imigrasi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(10) UNSIGNED NOT NULL,
+  `judul_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `konten_berita` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipe_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id`, `judul_berita`, `foto_berita`, `konten_berita`, `tipe_berita`, `created_at`, `updated_at`) VALUES
+(1, 'Berita bang', 'gaje ni_1532592245.png', 'uwowo', '0', '2018-07-26 01:04:05', '2018-07-26 01:04:05');
 
 -- --------------------------------------------------------
 
@@ -96,6 +106,14 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2018_07_16_091237_create_beritas_table', 1),
+(2, '2018_07_16_093100_create_beritas_table', 2);
 
 -- --------------------------------------------------------
 
@@ -174,7 +192,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'yusuf', 'yusufdwisantoso@gmail.com', '$2y$10$IybvBgAvQT60lEZTadHzWeh87rYGTE9yT1t5f69.YwkXuRj7KcCYa', 'MXIDRsNRIY5ESOSoYqs8DOdime9JYVLb1hYGIpq41YOlw11v1PAgLeiS83sW', '2018-07-13 09:45:12', '2018-07-13 09:45:12');
+(4, 'yusuf', 'yusufdwisantoso@gmail.com', '$2y$10$IybvBgAvQT60lEZTadHzWeh87rYGTE9yT1t5f69.YwkXuRj7KcCYa', 'MXIDRsNRIY5ESOSoYqs8DOdime9JYVLb1hYGIpq41YOlw11v1PAgLeiS83sW', '2018-07-13 09:45:12', '2018-07-13 09:45:12'),
+(5, 'fikri', 'mfikrihasani@gmail.com', '$2y$10$vzSIpKDIAP0J92yqq8EqxO1MhWKCdCxSZPe.r/bkJlXHMpDvCNNS.', 'eloliifpOIu9XSqOxNI07jWoSFTYUCIJ3Y1YXwkPtwCHinCXLtQh260ihO5P', '2018-07-16 01:31:36', '2018-07-16 01:31:36');
 
 -- --------------------------------------------------------
 
@@ -194,6 +213,12 @@ CREATE TABLE `visi_misi` (
 --
 
 --
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -210,16 +235,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
