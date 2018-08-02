@@ -114,20 +114,25 @@ class BeritaController extends Controller
                     'tipe_berita' => 'required',
                     'foto_berita' => 'image|nullable|max:1999'
                 ]);
+                
+                $berita = Berita::find($id);
                 // cek apakah data  memiliki foto 
                 if ($request->hasFile('foto_berita')) {
+                    // hapus terlebih dahulu foto sebelumnya: 
+                    if(file_exists("storage/foto_berita/".$berita->foto_berita)){
+                        unlink("storage/foto_berita/".$berita->foto_berita);
+                    }
                     // dapatkan filename dengn extension
-                    $fileNameWithExt = $request->file('foto_berita')->getClientOriginalName;
+                    $fileNameWithExt = $request->file('foto_berita')->getClientOriginalName();
                     // dapatkan hanya filename saja
                     $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
                     // dapatkan hanya extension saja 
-                    $fileExt = $request->file('foto_berita')->getClientOriginalExtension;
+                    $fileExt = $request->file('foto_berita')->getClientOriginalExtension();
                     // nama file untuk disimpan
                     $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
                     // upload gambar
-                    $path = $request->file('cover_image')->storeAs('public/foto_berita',$fileNameToStore);
+                    $path = $request->file('foto_berita')->storeAs('public/foto_berita',$fileNameToStore);
                 }
-                $berita = Berita::find($id);
                 $berita->judul_berita = $request->input('judul_berita');
                 $berita->konten_berita = $request->input('konten_berita');
                 $berita->tipe_berita = $request->input('tipe_berita');
@@ -149,7 +154,12 @@ class BeritaController extends Controller
     {
         //
         $berita = Berita::find($id);
-        $berita->delete();
-        return redirect('/berita')->with('success', 'Berita telah dihapus');
+        if(file_exists("storage/foto_berita/".$berita->foto_berita)){
+            unlink("storage/foto_berita/".$berita->foto_berita);
+            $berita->delete();
+            return redirect('/berita')->with('success', 'Berita telah dihapus');
+        }else{
+            return $berita->foto_berita." - Tidak ada file tersebut";
+        }
     }
 }

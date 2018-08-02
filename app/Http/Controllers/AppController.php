@@ -43,11 +43,13 @@ class AppController extends Controller
     }
 
     public function beritautama(){
-        return view('app.beritautama');
+        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
+        return view('app.beritautama')->with('news',$news);
     }
 
     public function beritaimigrasi(){
-        return view('app.beritaimigrasi');
+        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
+        return view('app.beritaimigrasi')->with('news',$news);
     }
 
     public function contact(){

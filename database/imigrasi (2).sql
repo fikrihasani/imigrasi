@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2018 at 10:04 AM
+-- Generation Time: Aug 02, 2018 at 10:05 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -43,7 +43,8 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `judul_berita`, `foto_berita`, `konten_berita`, `tipe_berita`, `created_at`, `updated_at`) VALUES
-(1, 'Berita bang', 'gaje ni_1532592245.png', 'uwowo', '0', '2018-07-26 01:04:05', '2018-07-26 01:04:05');
+(3, 'Berita 1', 'image b_1533196908.jpg', 'Berita 1 euy', '0', '2018-08-02 00:53:17', '2018-08-02 01:01:48'),
+(4, 'Berita 2', 'image b_1533196473.jpg', 'Ulala', '1', '2018-08-02 00:54:33', '2018-08-02 00:54:33');
 
 -- --------------------------------------------------------
 
@@ -238,7 +239,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
