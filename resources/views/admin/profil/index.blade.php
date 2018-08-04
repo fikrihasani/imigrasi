@@ -9,34 +9,35 @@
             <span style="float:right">
                 <a href="/profil/create">
                     <button class="btn btn-primary">
-                        Buat Baru
+                        Tambahkan Kakanim
                     </button>
                 </a>
             </span>
         </h1>
         <hr>
-        @if (count($berita2) > 0)
+        @if (count($kakanim2) > 0)
             <table class="table table-bordered">
                 <tr>
                     <td>No</td>
-                    <td>Judul Berita</td>
-                    <td>Dibuat Pada</td>
-                    <td>Diupdate Pada</td>
-                    <td>Aksi</td>
+                    <td>Foto</td>
+                    <td>Deskripsi</td>
                 </tr>
-                @foreach ($berita2 as $berita)
+                @foreach ($kakanim2 as $kakanim)
                     <tr>
                     <td>{{$i}}</td>
-                    <td>{{$berita->judul_berita}}</td>
-                    <td>{{$berita->created_at}}</td>
-                    <td>{{$berita->updated_at}}</td>
+                    <td>{{$kakanim->foto_kakanim}}</td>
+                    <td>{{$kakanim->deskripsi}}</td>
                     <td>
-                        <a href="/berita/{{$berita->id}}/edit"><button class="btn btn-primary">Edit</button></a>
-                        {!!Form::open(['action'=>['BeritaController@destroy', $berita->id], 'method'=>'POST'])!!}
+                        <a href="/profil/{{$kakanim->id_kakanim}}/edit"><button class="btn btn-primary">Edit</button></a>
+                    </td>
+                    <td>
+                        {!!Form::open(['action'=>['KakanimController@destroy', $kakanim->id_kakanim], 'method'=>'POST'])!!}
                             {{Form::hidden('_method','DELETE')}}
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
-                        <a href="/berita/{{$berita->id}}"><button class="btn btn-info">Lihat</button></a>
+                    </td>
+                    <td>    
+                        <a href="/profil/{{$kakanim->id_kakanim}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
                 </tr>
@@ -45,7 +46,7 @@
         @else
             <center>
                 <h2>
-                    Belum ada berita 
+                    Belum ada data Kepala Kantor
                 </h2>
             </center>
         @endif

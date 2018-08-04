@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2018 at 10:05 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Aug 04, 2018 at 01:43 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,8 +43,9 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `judul_berita`, `foto_berita`, `konten_berita`, `tipe_berita`, `created_at`, `updated_at`) VALUES
-(3, 'Berita 1', 'image b_1533196908.jpg', 'Berita 1 euy', '0', '2018-08-02 00:53:17', '2018-08-02 01:01:48'),
-(4, 'Berita 2', 'image b_1533196473.jpg', 'Ulala', '1', '2018-08-02 00:54:33', '2018-08-02 00:54:33');
+(6, 'Berita 1 Coba', 'imigrasi-mantab1_1533360809.png', 'Aku Bisa', '0', '2018-08-03 22:33:29', '2018-08-03 22:33:29'),
+(7, 'hggghghhj hhjhghjg', 'allinonepc_1533361154.jpg', 'sdyyjkjj jhkjh', '0', '2018-08-03 22:39:14', '2018-08-03 22:39:14'),
+(8, 'ahjajhaj', '246161_1533379183.jpg', 'berita baru buat dihapus', '0', '2018-08-04 03:39:43', '2018-08-04 03:39:43');
 
 -- --------------------------------------------------------
 
@@ -75,13 +76,24 @@ CREATE TABLE `info_publik` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kepala_masa`
+-- Table structure for table `kakanim`
 --
 
-CREATE TABLE `kepala_masa` (
-  `foto_kepala` int(20) NOT NULL,
-  `deskripsi_kepala` text NOT NULL
+CREATE TABLE `kakanim` (
+  `id_kakanim` int(10) UNSIGNED NOT NULL,
+  `nama_kakanim` varchar(255) NOT NULL,
+  `foto_kakanim` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kakanim`
+--
+
+INSERT INTO `kakanim` (`id_kakanim`, `nama_kakanim`, `foto_kakanim`, `deskripsi`, `created_at`, `updated_at`) VALUES
+(1, 'jhajkhjah hahahah', 'e4ccd6202b372f5938150c45db8185ce--stars_1533378657.jpg', 'jhahjkhdajh', '2018-08-04 10:30:57', '2018-08-04 03:30:57');
 
 -- --------------------------------------------------------
 
@@ -136,7 +148,8 @@ CREATE TABLE `pengaduan` (
 --
 
 CREATE TABLE `profil_pejabat` (
-  `foto_pejabat` int(20) NOT NULL,
+  `id_pejabat` int(20) NOT NULL,
+  `foto_pejabat` varchar(255) NOT NULL,
   `deskripsi_pejabat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -194,7 +207,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (4, 'yusuf', 'yusufdwisantoso@gmail.com', '$2y$10$IybvBgAvQT60lEZTadHzWeh87rYGTE9yT1t5f69.YwkXuRj7KcCYa', 'MXIDRsNRIY5ESOSoYqs8DOdime9JYVLb1hYGIpq41YOlw11v1PAgLeiS83sW', '2018-07-13 09:45:12', '2018-07-13 09:45:12'),
-(5, 'fikri', 'mfikrihasani@gmail.com', '$2y$10$vzSIpKDIAP0J92yqq8EqxO1MhWKCdCxSZPe.r/bkJlXHMpDvCNNS.', 'eloliifpOIu9XSqOxNI07jWoSFTYUCIJ3Y1YXwkPtwCHinCXLtQh260ihO5P', '2018-07-16 01:31:36', '2018-07-16 01:31:36');
+(5, 'fikri', 'mfikrihasani@gmail.com', '$2y$10$vzSIpKDIAP0J92yqq8EqxO1MhWKCdCxSZPe.r/bkJlXHMpDvCNNS.', 'eloliifpOIu9XSqOxNI07jWoSFTYUCIJ3Y1YXwkPtwCHinCXLtQh260ihO5P', '2018-07-16 01:31:36', '2018-07-16 01:31:36'),
+(6, 'santoso', 'kulitinta13@gmail.com', '$2y$10$ewqlLjenjQ8gCv.Ufe.65OyheX5B6cE7Qn8/5FKXA9g/6jiG1MgmG', NULL, '2018-08-03 22:00:44', '2018-08-03 22:00:44');
 
 -- --------------------------------------------------------
 
@@ -220,10 +234,22 @@ ALTER TABLE `berita`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kakanim`
+--
+ALTER TABLE `kakanim`
+  ADD PRIMARY KEY (`id_kakanim`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `profil_pejabat`
+--
+ALTER TABLE `profil_pejabat`
+  ADD PRIMARY KEY (`id_pejabat`);
 
 --
 -- Indexes for table `users`
@@ -239,7 +265,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `kakanim`
+--
+ALTER TABLE `kakanim`
+  MODIFY `id_kakanim` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -251,7 +283,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
