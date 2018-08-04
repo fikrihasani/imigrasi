@@ -18,11 +18,12 @@
                                 <span class="label label-default">Imigrasi News</span> |<i class="icon-calendar"></i> {{$berita->updated_at}}
                                 <h4>{{$berita->judul_berita}}</h4>
                                 <p>{{$berita->konten_berita}}</p>
-                                <div class="actions"><a href=""	class="button_medium pull-right">Read more <i class="icon-chevron-right"></i></a></div>
+                                <div class="actions"><a href="/beritaimigrasi/{{$berita->id}}"	class="button_medium pull-right">Read more <i class="icon-chevron-right"></i></a></div>
                             </div>
                         </div>
                     </div><!-- End Strip course -->
                 @endforeach
+                {{ $news->links() }}
             @else
                 <center>
                     <div class="alert alert-info">

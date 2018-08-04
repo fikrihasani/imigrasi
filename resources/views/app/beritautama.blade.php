@@ -14,14 +14,15 @@
                                 <div class="box-style-one borders"><img src="storage/foto_berita/{{$berita->foto_berita}}" alt=""><h5>{{$berita->judul_berita}}</h5></div>
                             </div>
                             <div class="span5">
-                                <span class="label label-default">Imigrasi News</span> |<i class="icon-calendar"></i> {{$berita->updated_at}}
+                                <span class="label label-default">Berita Utama</span> |<i class="icon-calendar"></i> {{$berita->updated_at}}
                                 <h4>{{$berita->judul_berita}}</h4>
                                 <p>{{$berita->konten_berita}}</p>
-                                <div class="actions"><a href=""	class="button_medium pull-right">Read more <i class="icon-chevron-right"></i></a></div>
+                                <div class="actions"><a href="/beritautama/{{$berita->id_berita}}"	class="button_medium pull-right">Read more <i class="icon-chevron-right"></i></a></div>
                             </div>
                         </div>
                     </div><!-- End Strip course -->
                 @endforeach
+                {{ $news->links() }}
             @else
                 <center>
                     <div class="alert alert-info">

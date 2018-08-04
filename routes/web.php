@@ -37,3 +37,5 @@ Route::get('/uu', 'AppController@uu')->name('uu');
 Route::get('/presiden', 'AppController@presiden')->name('presiden');
 Route::get('/pemerintah', 'AppController@pemerintah')->name('pemerintah');
 Route::get('/menteri', 'AppController@menteri')->name('menteri');
+Route::get('/beritautama/{berita}', 'AppController@detail')->name('detail utama');
+Route::get('/beritaimigrasi/{berita}', 'AppController@detail')->name('detail imigrasi');

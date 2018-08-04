@@ -43,23 +43,25 @@ class AppController extends Controller
     }
 
     public function beritautama(){
-        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
-<<<<<<< HEAD
+
+        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->paginate(10);
         return view('app.beritautama')->with('news', $news);
-=======
-        return view('app.beritautama')->with('news',$news);
->>>>>>> 949addd5ba92e6c07d271c1ecb5ff739a27419d7
     }
 
     public function beritaimigrasi(){
-        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
-<<<<<<< HEAD
+        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->paginate(10);
         return view('app.beritaimigrasi')->with('news', $news);
-=======
-        return view('app.beritaimigrasi')->with('news',$news);
->>>>>>> 949addd5ba92e6c07d271c1ecb5ff739a27419d7
     }
 
+    public function detail($id){
+        $berita = Berita::find($id);
+        if($berita->tipe_berita == 0){
+            $beritalain = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
+        }else{
+            $beritalain = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
+        }
+        return view('app.detail')->with(compact('berita','beritalain'));
+    }
     public function contact(){
         return view('app.contact');
     }
