@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

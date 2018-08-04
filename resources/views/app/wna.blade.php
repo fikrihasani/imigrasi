@@ -19,7 +19,32 @@
                     
                     <div class="tab-content">
                         <div class="tab-pane active" id="wna1">
-                        <p> wkjkkj jkkjjkkjhjk</p>
+                        <p align="justify">Izin Tinggal Kunjungan adalah izin tinggal bagi orang asing yang masuk ke wilayah 
+                         Indonesia dengan Visa Kunjungan yang diberikan oleh Pejabat Imigrasi di Tempat Pemeriksaan Imigrasi. Permohonan Izin Tinggal Kunjungan
+                         bagi anak yang lahir di wilayah Indonesia dari orang tua pemegang Izin Tinggal Kunjungan, permohonan tersebut diajukan kepada Kepala 
+                         Kantor Imigrasi atau Pejabat Imigrasi yang ditunjuk pada Kantor Imigrasi yang wilayah kerjanya meliputi tempat tinggal yang bersangkutan. 
+                         Perpanjangan Izin Tinggal Kunjungan diberikan oleh Kepala Kantor Imigrasi yang wilayah kerjanya meliputi tempat tinggal orang asing</p>
+                         
+                         <p align="justify">
+                            Izin Tinggal Kunjungan diberikan oleh Pejabat Imigrasi atau Pejabat Dinas Luar Negeri untuk berada di Wilayah Indonesia. Izin Tinggal Kunjungan diberikan kepada:
+                            <br/>1. Orang Asing yang masuk wilayah Indonesia dengan Visa Kunjungan; atau
+                            <br/>2. Anak yang baru lahir di wilayah Indonesia dan pada saat lahir ayah dan / atau ibunya pemegang Izin Tinggal Kunjungan. Izin Tinggal Kunjungan tersebut diberikan sesuai dengan Izin Tinggal Kunjungan ayah dan/atau ibunya.
+                            <br/>3. Orang Asing dari negara yang dibebaskan dari kewajiban memiliki Visa sesuai dengan ketentuan peraturan perundang-undangan;
+                            <br/>4. Orang Asing yang bertugas sebagai awak Alat Angkut yang sedang berlabuh atau berada di wilayah Indonesia sesuai dengan ketentuan peraturan perundang-undangan;
+                            <br/>5. Orang Asing yang masuk wilayah Indonesia dalam keadaan darurat; dan
+                            <br/>6. Orang Asing yang masuk wilayah Indonesia dengan Visa Kunjungan saat kedatangan
+                         </p>
+
+                         <p align="justify">
+                         Izin Tinggal Kunjungan berakhir karena beberapa sebab antara lain:
+                            <br/>1. Pemegang izin kembali ke negara asalnya;
+                            <br/>2. Habis masa berlaku;
+                            <br/>3. Beralih status menjadi Izin Tinggal Terbatas;
+                            <br/>4. Dibatalkan oleh Menteri atau Pejabat Imigrasi yang ditunjuk;
+                            <br/>5. Pemegang izin dikenai deportasi; atau
+                            <br/>6. Pemegang izin Meninggal dunia.
+                         </p>
+    
                             <a class="accrodian-trigger" href="#">Syarat</a>
                             <div class="accrodian-data">
                                 <p>

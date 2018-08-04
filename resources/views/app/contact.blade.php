@@ -23,7 +23,6 @@
                     <hr>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.639222030405!2d119.87964738610843!3d-0.9059189403642333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bee74ad13d239%3A0xda2d3af5ffbb743e!2sKantor+Imigrasi+Kelas+I+-+Palu!5e0!3m2!1sid!2sid!4v1532348334676" height="250" frameborder="0" style="border:0" allowfullscreen>
                     </iframe>
-    
                 </div>
 
             </aside>

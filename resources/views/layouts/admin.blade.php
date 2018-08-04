@@ -39,8 +39,14 @@
                                 Berita
                             </li>
                         </a>
-
+                        &nbsp &nbsp
+                        <a href="/profil">
+                            <li>
+                                Profil
+                            </li>
+                        </a>
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

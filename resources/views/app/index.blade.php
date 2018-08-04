@@ -172,10 +172,9 @@
  
          <div class="container">
 			 <div class="row">
-				 <aside class="span1"></aside>
-				 <aside  class="span4 ">
+				 <aside  class="span3">
 						<div class="box-style-1 ribbon borders">
-							 <table class="table table-bordered table-striped">
+							<!-- <table class="table table-bordered table-striped">
 								<thead>
 									<tr>								
 										<th>Jam Kerja</th>
@@ -206,7 +205,7 @@
 										<td>13.00</td>
 									</tr>
 								</tbody>
-							</table>
+							</table>-->
                             <br/>
                             <p><a  href="https://antrian.imigrasi.go.id/" title="Antrian Online"><img src="img/online.jpg" alt="Banner" class="img-rounded" height="270" width="300"></a></p>
 							<br/>
@@ -214,6 +213,23 @@
 				 
 						</div>
 				</aside>
+
+                <aside class="span3">
+                
+                </aside>
+                <aside class="span4">
+                    <div class="box-style-1 ribbon borders">
+                        <h3 align="center">Link Instansi Terkait</h3>
+                        <hr>
+                        <a href="https://kemenkumham.go.id/" target="_blank" ><img src="{{asset('img/kemenkumham.jpg')}}" alt="Logo"></a> 
+						<br/><a href="http://imigrasi.go.id/" target="_blank" ><img src="{{asset('img/ditjen.jpg')}} "alt="Logo"></a>
+						<br/><a href="http://www.politeknikimigrasi.ac.id/" target="_blank" ><img src="{{asset('img/aim.jpg')}}" alt="Logo"></a>
+						<br/><a href="https://www.kejaksaan.go.id/" target="_blank" ><img src="{{asset('img/kejaksaan.jpg')}}" alt="Logo" ></a>
+						<br/><a href="https://www.kemlu.go.id/id/" target="_blank" ><img src="{{asset('img/deplu.jpg')}}" alt="Logo"></a>
+						<a href="https://www.kpk.go.id/id/" target="_blank"><img src="{{asset('img/kpk.jpg')}}" alt="Logo"></a>
+                    </div>
+                </aside>
+
 			</div>
         </div><!-- end container-->
     

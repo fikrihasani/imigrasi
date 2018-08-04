@@ -301,8 +301,8 @@
 				<div class="span3" id="brand-footer">
 					<p><img src="#" alt=""></p>
 					<p>Copyright © 2018</p>
-					<div class="twitter"><a href="#" >Follow on Twitter</a></div>
-					<div class="fb"><a href="#">Follow on  Facebook</a></div>  
+					<div class="instagram"><a href="#" target="_blank" >Follow on Twitter</a></div>
+					<div class="fb"><a href="#" target="_blank">Follow on  Facebook</a></div>  
 				</div>
 				<div class="span3" id="contacts-footer">
 					<h4>Alamat</h4>
@@ -318,17 +318,9 @@
 					
 				</div>
 				
-				<div class="span3" id="quick-links">
-					<h4>Links Instansi</h4>
-					<ul>
-						<li><a href="https://kemenkumham.go.id/" ><img src="{{asset('img/kemenkumham.jpg')}}" alt="Logo"></a></li>
-						<li><a href="http://imigrasi.go.id/" ><img src="{{asset('img/ditjen.jpg')}} "alt="Logo"></a></li>
-						<li><a href="http://www.politeknikimigrasi.ac.id/" ><img src="{{asset('img/aim.jpg')}}" alt="Logo"></a></li>
-						<li><a href="https://www.kejaksaan.go.id/" ><img src="{{asset('img/kejaksaan.jpg')}}" alt="Logo" ></a></li>
-						<li><a href="https://www.kemlu.go.id/id/" ><img src="{{asset('img/deplu.jpg')}}" alt="Logo"></a></li>
-						<li><a href="https://www.kpk.go.id/id/" ><img src="{{asset('img/kpk.jpg')}}" alt="Logo"></a></li>
-						
-					</ul>
+				<div class="span4" id="quick-links">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.639222030405!2d119.87964738610843!3d-0.9059189403642333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bee74ad13d239%3A0xda2d3af5ffbb743e!2sKantor+Imigrasi+Kelas+I+-+Palu!5e0!3m2!1sid!2sid!4v1532348334676" height="250" frameborder="0" style="border:0" allowfullscreen>
+                    </iframe>
 				</div>
 				
 			</div>
