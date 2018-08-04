@@ -44,12 +44,20 @@ class AppController extends Controller
 
     public function beritautama(){
         $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
+<<<<<<< HEAD
         return view('app.beritautama')->with('news', $news);
+=======
+        return view('app.beritautama')->with('news',$news);
+>>>>>>> 949addd5ba92e6c07d271c1ecb5ff739a27419d7
     }
 
     public function beritaimigrasi(){
         $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
+<<<<<<< HEAD
         return view('app.beritaimigrasi')->with('news', $news);
+=======
+        return view('app.beritaimigrasi')->with('news',$news);
+>>>>>>> 949addd5ba92e6c07d271c1ecb5ff739a27419d7
     }
 
     public function contact(){

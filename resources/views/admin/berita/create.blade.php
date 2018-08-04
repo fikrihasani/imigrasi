@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             {{Form::label('tipe_berita', 'Tipe Berita')}}
-            {{Form::select('tipe_berita', ['0' => 'Imigrasi', '1' => 'Kantor'],null,['class'=>'form-control'])}}
+            {{Form::select('tipe_berita', ['0' => 'Imigrasi', '1' => 'Utama'],null,['class'=>'form-control'])}}
         </div>
         <div class="form-group">
             {{Form::file('foto_berita')}}

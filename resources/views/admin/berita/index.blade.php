@@ -22,7 +22,7 @@
                     <td>Judul Berita</td>
                     <td>Dibuat Pada</td>
                     <td>Diupdate Pada</td>
-                    <td>Aksi</td>
+                    <td colspan="3">Aksi</td>
                 </tr>
                 @foreach ($berita2 as $berita)
                     <tr>
@@ -32,10 +32,14 @@
                     <td>{{$berita->updated_at}}</td>
                     <td>
                         <a href="/berita/{{$berita->id}}/edit"><button class="btn btn-primary">Edit</button></a>
+                    </td>
+                    <td>
                         {!!Form::open(['action'=>['BeritaController@destroy', $berita->id], 'method'=>'POST'])!!}
                             {{Form::hidden('_method','DELETE')}}
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
+                    </td>
+                    <td>    
                         <a href="/berita/{{$berita->id}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
