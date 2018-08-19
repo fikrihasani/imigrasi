@@ -14,7 +14,7 @@ class PengaduanController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['create','store','cek','bla']);
+        $this->middleware('auth')->except(['create','store','cek']);
     }
 
     public function index()

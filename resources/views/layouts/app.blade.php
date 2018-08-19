@@ -254,7 +254,7 @@
 					<!-- Begin Item -->
 					<div class="drop-down-container" id="icon-menu">
 						<div class="row">
-							<div class="span6 "><a href="{{route('galeri')}}" title="Cek Pengaduan"><i class="icon-search icon-3x"></i>Cek Pengaduan</a></div>
+							<div class="span6 "><a href="/cekpengaduan" title="Cek Pengaduan"><i class="icon-search icon-3x"></i>Cek Pengaduan</a></div>
 							<div class="span6"><a href="/pengaduan/create" title="Buat Pengaduan"><i class="icon-book icon-3x"></i>Buat Pengaduan</a></div>
 						</div><!-- End row -->
 					</div><!-- End Item Container -->
