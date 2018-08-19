@@ -24,6 +24,8 @@ Route::get('/cekpengaduan', 'PengaduanController@cek');
 Route::post('/caripengaduan', 'PengaduanController@cari');
 // untuk halaman admin
 Route::get('/home', 'HomeController@index')->name('home');
+// untuk CRUD kakanim
+Route::resource('profil', 'KakanimController');
 // untuk halaman tampilan depan
 Route::get('/index', 'AppController@index')->name('index');
 Route::get('/sejarah', 'AppController@sejarah')->name('sejarah');
