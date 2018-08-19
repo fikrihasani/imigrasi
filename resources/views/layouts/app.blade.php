@@ -69,7 +69,7 @@
 				<div class="drop-down-container">
 				
 					<div class="row">            
-							<div class="span10">
+							<div class="span12">
 								<ul class="tabs">
 									<li><a class="active" href="#section-1">Sejarah</a></li>
 									<li><a href="#section-2">Visi - Misi</a></li>
@@ -178,12 +178,12 @@
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 									<p><a href="{{route('wna')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span2">
+								<div class="span3">
 									<h5><a href="{{route('layananonline')}}"><i class="icon-book"></i>Layanan Online</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 									<p><a href="{{route('layananonline')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span2">
+								<div class="span3">
 									<h5><a href="{{route('biaya')}}"><i class="icon-book"></i>Biaya Keimigrasian</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 									<p><a href="{{route('biaya')}}" class="button_red_small">Read more</a></p>
@@ -199,9 +199,8 @@
 				<!-- Begin Item -->
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
-						<div class="span2"></div>
-						<div class="span4 "><a href="{{route('beritautama')}}" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
-						<div class="span4"><a href="{{route('beritaimigrasi')}}" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
+						<div class="span6 "><a href="{{route('beritautama')}}" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
+						<div class="span6"><a href="{{route('beritaimigrasi')}}" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
@@ -213,7 +212,7 @@
 					<div class="row">        
 						<div class="span12">
 							<div class="row">
-								<div class="span2">
+								<div class="span3">
 									<h5><a href="{{route('uu')}}"><i class="icon-book"></i>Undang-Undang</a> </h5>
 									<p>bla bla bla.</p>
 									<p><a href="{{route('uu')}}" class="button_red_small">Read more</a></p>
@@ -224,7 +223,7 @@
 									<p><a href="{{route('presiden')}}"class="button_red_small">Read more</a></p>
 								</div>
 					   
-								<div class="span2">
+								<div class="span3">
 									<h5><a href="{{route('pemerintah')}}"><i class="icon-book"></i>Pemerintah</a></h5>
 									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 									<p><a href="{{route('pemerintah')}}" class="button_red_small">Read more</a></p>
@@ -245,13 +244,21 @@
 				<!-- Begin Item -->
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
-						<div class="span3 "><a href="{{route('galeri')}}" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
+						<div class="span4 "><a href="{{route('galeri')}}" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
 						<div class="span4"><a href="{{route('kepuasan')}}" title="Kepuasan Masyarakat"><i class="icon-star icon-3x"></i>Indeks Kepuasan Masyarakat </a></div>
-						<div class="span3"><a href="{{route('statistik')}}" title="Course detail"><i class="icon-list icon-3x"></i>Data Statistik</a></div>
+						<div class="span4"><a href="{{route('statistik')}}" title="Course detail"><i class="icon-list icon-3x"></i>Data Statistik</a></div>
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
-				
+				<li><a href="#" class="drop-down">Pengaduan</a>
+					<!-- Begin Item -->
+					<div class="drop-down-container" id="icon-menu">
+						<div class="row">
+							<div class="span6 "><a href="{{route('galeri')}}" title="Cek Pengaduan"><i class="icon-search icon-3x"></i>Cek Pengaduan</a></div>
+							<div class="span6"><a href="/pengaduan/create" title="Buat Pengaduan"><i class="icon-book icon-3x"></i>Buat Pengaduan</a></div>
+						</div><!-- End row -->
+					</div><!-- End Item Container -->
+					</li><!-- End Item -->
 				<li><a href="javascript:void(0)" class="drop-down">Hubungi Kami</a>
 				<!-- Begin Item -->
 				<div class="drop-down-container">
@@ -286,6 +293,7 @@
 					</div><!-- End row-->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
+
 			</ul><!-- End Mega Menu -->
 		</div>
 		</nav><!-- /navbar -->

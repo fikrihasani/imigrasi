@@ -17,6 +17,11 @@ Route::get('/', 'AppController@index');
 Auth::routes();
 // untuk CRUD berita
 Route::resource('berita', 'BeritaController');
+// untuk CRUD pengaduan
+Route::resource('pengaduan', 'PengaduanController');
+// untuk cek pengaduan
+Route::get('/cekpengaduan', 'PengaduanController@cek');
+Route::post('/caripengaduan', 'PengaduanController@cari');
 // untuk halaman admin
 Route::get('/home', 'HomeController@index')->name('home');
 // untuk halaman tampilan depan
