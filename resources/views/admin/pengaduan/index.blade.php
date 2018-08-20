@@ -37,7 +37,7 @@
                     }
                     ?></td>
             <td>{{$adu->kode_unik}}</td>
-            <td><a href="/pengaduan/{{$adu->id}}/show">Lihat</a></td>
+            <td><a href="/pengaduan/{{$adu->id}}">Lihat</a></td>
         </tr>
         @endforeach
     </table>

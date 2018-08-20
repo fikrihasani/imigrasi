@@ -14,7 +14,7 @@ class PengaduanController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['create','store','cek']);
+        $this->middleware('auth')->except(['create','store','cek','cari']);
     }
 
     public function index()
@@ -179,14 +179,17 @@ class PengaduanController extends Controller
     }
     // masih eror
     public function cari(){
-        $kodeunik = $_POST['kode_unik'];
-        if($kodeunik != null){
+        if(!empty($_POST)){
+            $kodeunik = $_POST['kode_unik'];
+            if($kodeunik == ''){
+                return redirect('/cekpengaduan')->with('error','Form Harus Diisi');
+            }
             $result = Pengaduan::where('kode_unik',$kodeunik)->first();
-            print_r($result);
-            exit;
-            return redirect('/cekpengaduan')->with('hasil',$result);
-        }else{
-            return redirect('/cekpengaduan')->with('error','Field Harus Diisi');
+            if($result != null){
+                return redirect('/cekpengaduan')->with('hasil',$result);
+            }else{
+                return redirect('/cekpengaduan')->with('empty','Maaf Pengaduan anda tidak dapat ditemukan');
+            }
         }
     }
 

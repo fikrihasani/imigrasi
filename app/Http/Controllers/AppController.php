@@ -44,20 +44,6 @@ class AppController extends Controller
     }
 
     public function beritautama(){
-<<<<<<< HEAD
-        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
-
-        return view('app.beritautama')->with('news', $news);
-        return view('app.beritautama')->with('news',$news);
-    }
-
-    public function beritaimigrasi(){
-        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
-
-        return view('app.beritaimigrasi')->with('news', $news);
-
-        return view('app.beritaimigrasi')->with('news',$news);
-=======
 
         $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->paginate(10);
         return view('app.beritautama')->with('news', $news);
@@ -66,7 +52,6 @@ class AppController extends Controller
     public function beritaimigrasi(){
         $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->paginate(10);
         return view('app.beritaimigrasi')->with('news', $news);
->>>>>>> 96b64e282e11bd0a4ce2e140dfe91db3f5e5c778
     }
 
     public function detail($id){
