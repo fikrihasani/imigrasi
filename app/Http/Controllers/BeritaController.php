@@ -13,6 +13,12 @@ class BeritaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $berita2 = Berita::all();
@@ -152,8 +158,9 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //dapatkan berita
         $berita = Berita::find($id);
+        // cek apakah file foto berita ada atau tidak. 
         if(file_exists("storage/foto_berita/".$berita->foto_berita)){
             unlink("storage/foto_berita/".$berita->foto_berita);
             $berita->delete();
