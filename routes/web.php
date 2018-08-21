@@ -17,6 +17,8 @@ Route::get('/', 'AppController@index');
 Auth::routes();
 // untuk CRUD berita
 Route::resource('berita', 'BeritaController');
+// untuk CRUD biaya
+Route::resource('biayaimigrasi', 'BiayaController');
 // untuk halaman admin
 Route::get('/home', 'HomeController@index')->name('home');
 // untuk CRUD kakanim

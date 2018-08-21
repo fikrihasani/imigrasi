@@ -172,51 +172,35 @@
  
          <div class="container">
 			 <div class="row">
-				 <aside  class="span3">
-						<div class="box-style-1 ribbon borders">
-							<!-- <table class="table table-bordered table-striped">
-								<thead>
-									<tr>								
-										<th>Jam Kerja</th>
-										<th>Pukul</th>
-										<th>S/d</th>				
-									</tr>
-								</thead>
-							
-								<tbody>
-									<tr>
-										<td>Senin - Kamis</td>
-										<td>07.30</td>
-										<td>16.00</td>
-									</tr>
-									<tr>
-										<td>Istirahat</td>
-										<td>12.00</td>
-										<td>13.00</td>
-									</tr>
-									<tr>
-										<td>Jumat</td>
-										<td>7.30</td>
-										<td>16.30</td>
-									</tr>
-									<tr>
-										<td>Istirahat</td>
-										<td>11.30</td>
-										<td>13.00</td>
-									</tr>
-								</tbody>
-							</table>-->
-                            <br/>
-                            <p><a  href="https://antrian.imigrasi.go.id/" title="Antrian Online"><img src="img/online.jpg" alt="Banner" class="img-rounded" height="270" width="300"></a></p>
-							<br/>
-						    <p><a  href="https://apoa.imigrasi.go.id/poa/" title="Apoa"><img src="img/apoa.jpg" alt="Banner" class="img-rounded" height="420" width="300"></a></p>
-				 
-						</div>
-				</aside>
-
-                <aside class="span3">
-                
+				 <aside  class="span6">
+                    <div class="box-style-1 ribbon borders">
+                        <h3>Foto dan Video</h3>
+						<iframe height="300" src="http://www.youtube.com/embed/pgk-719mTxM?wmode=transparent"></iframe>
+                        <br>
+                        <div class="row-fluid">
+                            <div class=" span4 picture">
+                                <a href="img/gallery/1.jpg" title="Title" class="fancybox" rel="gallery1" >
+                                <span class="photo_icon"></span>
+                                <img src="img/gallery/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="span4 picture">
+                                <a href="img/gallery/2.jpg" title="Title" class="fancybox" rel="gallery1">
+                                <span class="photo_icon"></span>
+                                <img src="img/gallery/2.jpg" alt="" >
+                                </a>
+                            </div>
+                            <div class="span4 picture">
+                                <a class="fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo" title="Video youtube"  >
+                                <span class="video_icon_youtube"></span>
+                                <img src="img/gallery/3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>    
                 </aside>
+
+
                 <aside class="span4">
                     <div class="box-style-1 ribbon borders">
                         <h3 align="center">Link Instansi Terkait</h3>

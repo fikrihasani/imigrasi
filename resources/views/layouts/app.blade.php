@@ -104,12 +104,7 @@
 												2.KEPASTIAN BIAYA<br/>
 												3.KEPASTIAN WAKTU PENYELESAIAN</p>
 										</div>
-										
-										<div class="span4">
-											<h5>MAKLUMAT LAYANAN</h5>
-											<p><img src="img/teacher-small.jpg" class="img-rounded shadow" alt=""></p>
-										</div>
-										
+									
 									</div><!-- End row -->
 									</li>
 									
@@ -133,8 +128,7 @@
 									<div class="row">
 									
 										<div class="span4">
-											<p><img src="img/teacher-small.jpg" class="img-rounded shadow" alt=""></p>
-
+											<p><img src="#" class="img-rounded shadow" alt=""></p>
 											<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 											<p><a href="{{route('kakanim')}}" class="button_red_small" title="kepala kantor">Read more</a></p>
 										</div>                                
@@ -145,10 +139,10 @@
 									<li id="section-5">
 									<div class="row">
 										<div class="span6">
-											<p><img src="img/teacher-small.jpg" class="img-responsif" alt=""></p>
+											<p><img src="img/strukturorganisasi.jpg" class="img-responsif" alt=""></p>
 										</div>  
 										<div class="span3">
-											<p>jkljalkjakljlka jlkajklajklj.</p>
+											<p>Kantor Imigrasi Kelas I palu memiliki 4 seksi dan 1 bagian Tata Usaha. </p>
 										</div>
 									</div>
 									<!-- End row -->
@@ -170,22 +164,22 @@
 							<div class="row">
 								<div class="span3">
 									<h5><a href="{{route('wni')}}"><i class="icon-book"></i>Layanan Warga Negara Indonesia</a></h5>
-									<p>bla bla bla.</p>
+									<p align="Justify">Layanan Warga Negara Indonesia Meliputi Pembuatan Dokumen Perjalanan Republik Indonesia, Persyaratan Permohonan, Penggantian Paspor, Prosedur Penggantan dan Masa Berlaku Paspor</p>
 									<p><a href="{{route('wni')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
 									<h5><a href="{{route('wna')}}"><i class="icon-book"></i>Layanan Warga Negara Asing</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p align="Justify">Layanan Warga Negara Asing meliputi Ijin Tinggal Kunjungan, Ijin Tinggal Terbatas, Ijin Tinggal tetap, Fasilitas Keimigrasian, Mutasi Data Orang asing</p>
 									<p><a href="{{route('wna')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span2">
 									<h5><a href="{{route('layananonline')}}"><i class="icon-book"></i>Layanan Online</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p align="Justify">Layanan Online Meliputi Visa Online, Pelaporan Orang Asing, Ijin Tinggal Online, Antrian Online</p>
 									<p><a href="{{route('layananonline')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span2">
 									<h5><a href="{{route('biaya')}}"><i class="icon-book"></i>Biaya Keimigrasian</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p align="Justify">Biaya Keimigrasian Merupakan biaya yang terkait layanan keimigrasian</p>
 									<p><a href="{{route('biaya')}}" class="button_red_small">Read more</a></p>
 								</div>
 							</div><!-- End row -->
@@ -215,23 +209,23 @@
 							<div class="row">
 								<div class="span2">
 									<h5><a href="{{route('uu')}}"><i class="icon-book"></i>Undang-Undang</a> </h5>
-									<p>bla bla bla.</p>
+									<p>Merupakan Produk Undang-Undang yang terkait dengan Keimigrasian</p>
 									<p><a href="{{route('uu')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
 									<h5><a href="{{route('presiden')}}"><i class="icon-book"></i>Presiden</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p>Merupakan Peraturan Presiden terkait dengan Keimigrasian</p>
 									<p><a href="{{route('presiden')}}"class="button_red_small">Read more</a></p>
 								</div>
 					   
 								<div class="span2">
 									<h5><a href="{{route('pemerintah')}}"><i class="icon-book"></i>Pemerintah</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p>Merupakan Peraturan Pemerintah terkait dengan Keimigrasian</p>
 									<p><a href="{{route('pemerintah')}}" class="button_red_small">Read more</a></p>
 								</div>
 								<div class="span3">
 									<h5><a href="{{route('menteri')}}"><i class="icon-book"></i>Menteri</a></h5>
-									<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+									<p>Merupakan Peraturan Menteri terkait dengan Keimigrasian</p>
 									<p><a href="{{route('menteri')}}" class="button_red_small">Read more</a></p>
 								</div>
 							</div><!-- End row -->

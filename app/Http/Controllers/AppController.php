@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Berita;
 use App\Kakanim;
+use App\Biaya;
 
 class AppController extends Controller
 {
@@ -24,7 +25,8 @@ class AppController extends Controller
     }
 
     public function kakanim(){
-        return view('app.kakanim');
+        $kepala = Kakanim::where('id_kakanim', '>', 0)->orderBy('updated_at')->paginate(10);
+        return view('app.kakanim')->with('kepala',$kepala);
     }
 
     public function wni(){
@@ -40,24 +42,20 @@ class AppController extends Controller
     }
 
     public function biaya(){
-        return view('app.biaya');
+        $biaya = Biaya::select($data_biaya);
+        if($biaya>tipe_biaya == 0){
+            $biayalain = Biaya::where('tipe_biaya',0)->get();
+        }else{
+            $biayalain = Biaya::where('tipe_biaya',1)->get();
+        }
+        return view('app.detail')->with(compact('biaya','biayalain'));
+        /*$biaya = Biaya::select('tipe_biaya')->where('tipe_biaya','=',0)->get();
+        $biaya1 = Biaya::select('tipe_biaya')->where('tipe_biaya','=',1)->get();
+        return view('app.biaya')->with(compact('biaya', $biaya);*/
+ 
     }
 
     public function beritautama(){
-<<<<<<< HEAD
-        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->get();
-
-        return view('app.beritautama')->with('news', $news);
-        return view('app.beritautama')->with('news',$news);
-    }
-
-    public function beritaimigrasi(){
-        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->get();
-
-        return view('app.beritaimigrasi')->with('news', $news);
-
-        return view('app.beritaimigrasi')->with('news',$news);
-=======
 
         $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->paginate(10);
         return view('app.beritautama')->with('news', $news);
@@ -66,7 +64,6 @@ class AppController extends Controller
     public function beritaimigrasi(){
         $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->paginate(10);
         return view('app.beritaimigrasi')->with('news', $news);
->>>>>>> 96b64e282e11bd0a4ce2e140dfe91db3f5e5c778
     }
 
     public function detail($id){
@@ -78,6 +75,7 @@ class AppController extends Controller
         }
         return view('app.detail')->with(compact('berita','beritalain'));
     }
+   
     public function contact(){
         return view('app.contact');
     }

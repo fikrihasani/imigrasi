@@ -45,6 +45,12 @@
                                 Profil
                             </li>
                         </a>
+                        &nbsp &nbsp
+                        <a href="/biayaimigrasi">
+                            <li>
+                                Biaya
+                            </li>
+                        </a>
                     </ul>
 
 
