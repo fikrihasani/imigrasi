@@ -51,6 +51,12 @@
                                 Biaya
                             </li>
                         </a>
+                        &nbsp &nbsp
+                        <a href="/galeri">
+                            <li>
+                                Galeri
+                            </li>
+                        </a>
                     </ul>
 
 
