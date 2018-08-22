@@ -3,7 +3,7 @@
 @section('admin-content')
     <h1>Perbaharui Biaya</h1>
     <hr>
-    {!! Form::open(['action' => ['BiayaController@update', $biaya->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    {!! Form::open(['action' => ['BiayaController@update', $biaya->id_biaya], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
             {{Form::label('judul_biaya', 'Judul Biaya')}}
             {{Form::text('judul_biaya',$biaya->judul_biaya,['class'=>'form-control', 'placeholder'=>'Masukkan Judul Biaya'])}}

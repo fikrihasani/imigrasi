@@ -17,6 +17,10 @@ Route::get('/', 'AppController@index');
 Auth::routes();
 // untuk CRUD berita
 Route::resource('berita', 'BeritaController');
+// untuk CRUD biaya
+Route::resource('biayaimigrasi', 'BiayaController');
+// untuk CRUD produk hukum
+Route::resource('produkhukum', 'ProdukhukumController');
 // untuk CRUD pengaduan
 Route::resource('pengaduan', 'PengaduanController');
 // untuk cek pengaduan

@@ -7,40 +7,40 @@
         <h1>
             Biaya Imigrasi 
             <span style="float:right">
-                <a href="/biayaimigrasi/create">
+                <a href="/produkhukum/create">
                     <button class="btn btn-primary">
-                        Tambahkan Biaya
+                        Tambahkan Produk Hukum
                     </button>
                 </a>
             </span>
         </h1>
         <hr>
-        @if (count($biaya2) > 0)
+        @if (count($produk2) > 0)
             <table class="table table-bordered">
                 <tr>
                     <td>No</td>
-                    <td>Judul Biaya</td>
+                    <td>Keterangan</td>
                     <td>Dibuat Pada</td>
                     <td>Diupdate Pada</td>
                     <td colspan="3">Aksi</td>
                 </tr>
-                @foreach ($biaya2 as $biaya)
+                @foreach ($produk2 as $produk)
                     <tr>
                     <td>{{$i}}</td>
-                    <td>{{$biaya->judul_biaya}}</td>
-                    <td>{{$biaya->created_at}}</td>
-                    <td>{{$biaya->updated_at}}</td>
+                    <td>{{$produk->keterangan}}</td>
+                    <td>{{$produk->created_at}}</td>
+                    <td>{{$produk->updated_at}}</td>
                     <td>
-                        <a href="/biayaimigrasi/{{$biaya->id_biaya}}/edit"><button class="btn btn-primary">Edit</button></a>
+                        <a href="/produkhukum/{{$produk->id_produk}}/edit"><button class="btn btn-primary">Edit</button></a>
                     </td>
                     <td>
-                        {!!Form::open(['action'=>['BiayaController@destroy', $biaya->id_biaya], 'method'=>'POST'])!!}
+                        {!!Form::open(['action'=>['ProdukhukumController@destroy', $produk->id_produk], 'method'=>'POST'])!!}
                             {{Form::hidden('_method','DELETE')}}
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
                     </td>
                     <td>    
-                        <a href="/biayaimigrasi/{{$biaya->id_biaya}}"><button class="btn btn-info">Lihat</button></a>
+                        <a href="/produkhukum/{{$produk->id_produk}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
                 </tr>
@@ -49,7 +49,7 @@
         @else
             <center>
                 <h2>
-                    Belum ada biaya 
+                    Belum ada Produk Hukum
                 </h2>
             </center>
         @endif
