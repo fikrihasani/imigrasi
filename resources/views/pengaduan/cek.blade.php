@@ -9,7 +9,7 @@
         {{csrf_field()}}
         Masukkan Kode Unik Pengaduan Anda (Kode dikirimkan oleh admin kami melalui email):
         <input type="text" name="kode_unik" id="kode_unik" class="form-control">
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" class="btn btn-primary">
     </form>
     @if (session('hasil'))
         <b>Hasil Pencarian:</b>    
