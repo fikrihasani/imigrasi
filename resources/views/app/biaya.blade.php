@@ -16,11 +16,14 @@
                     
                     <div class="tab-content">
                         <div class="tab-pane active" id="wna1">
-							<iframe src="../storage/biaya/{{$biaya->id_biaya}}" width="100%" height="100%"></iframe>
+                            @if ($biaya != null)
+							    <iframe src="../storage/biaya/{{$biaya->data_biaya}}" width="100%" height="100%"></iframe>
+                            @endif
 						</div>
                         <div class="tab-pane" id="wna2">
-							 
-							
+                            @if ($biaya1 != null)
+                                <iframe src="../storage/biaya/{{$biaya1->data_biaya}}" width="100%" height="100%"></iframe>                            
+                            @endif
                         </div>
                     </div>
                     

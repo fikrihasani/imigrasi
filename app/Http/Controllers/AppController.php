@@ -50,9 +50,9 @@ class AppController extends Controller
             $biayalain = Biaya::where('tipe_biaya',1)->get();
         }
         return view('app.detail')->with(compact('biaya','biayalain'));*/
-        $biaya = Biaya::select('tipe_biaya')->where('tipe_biaya','=',0)->get();
-        $biaya1 = Biaya::select('tipe_biaya')->where('tipe_biaya','=',1)->get();
-        return view('app.biaya')->with('biaya', $biaya);
+        $biaya = Biaya::where('tipe_biaya',0)->first();
+        $biaya1 = Biaya::where('tipe_biaya',1)->first();
+        return view('app.biaya')->with(compact('biaya', 'biaya1'));
  
     }
 
