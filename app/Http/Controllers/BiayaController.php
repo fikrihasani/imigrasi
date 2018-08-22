@@ -73,25 +73,25 @@ class BiayaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $id_biaya
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_biaya)
     {
         //
-        $biaya = Biaya::find($id);
+        $biaya = Biaya::find($id_biaya);
         return view('admin.biayaimigrasi.show')->with('biaya',$biaya);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $id_biaya
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_biaya)
     {
-        $biaya = Biaya::find($id);
+        $biaya = Biaya::find($id_biaya);
         return view('admin.biayaimigrasi.edit')->with('biaya',$biaya);
     }
 
@@ -99,10 +99,10 @@ class BiayaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $id_biaya
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_biaya)
     {
         //
                 //rule buat data yang diupload
@@ -112,7 +112,7 @@ class BiayaController extends Controller
                     'data_biaya' => 'mimes:pdf,doc,docx|max:1999'
                 ]);
                 
-                $biaya = Biaya::find($id);
+                $biaya = Biaya::find($id_biaya);
                 // cek apakah data  memiliki foto 
                 if ($request->hasFile('data_biaya')) {
                     // hapus terlebih dahulu foto sebelumnya: 
@@ -143,13 +143,13 @@ class BiayaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $id_biaya
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_biaya)
     {
         //
-        $biaya = Biaya::find($id);
+        $biaya = Biaya::find($id_biaya);
         if(file_exists("storage/biaya/".$biaya->data_biaya)){
             unlink("storage/biaya/".$biaya->data_biaya);
             $biaya->delete();

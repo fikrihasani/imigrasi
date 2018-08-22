@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use App\Berita;
 use App\Kakanim;
 use App\Biaya;
+use App\Produk;
 
 class AppController extends Controller
 {
@@ -42,16 +43,16 @@ class AppController extends Controller
     }
 
     public function biaya(){
-        $biaya = Biaya::select($data_biaya);
+        /*$biaya = Biaya::select($data_biaya);
         if($biaya>tipe_biaya == 0){
             $biayalain = Biaya::where('tipe_biaya',0)->get();
         }else{
             $biayalain = Biaya::where('tipe_biaya',1)->get();
         }
-        return view('app.detail')->with(compact('biaya','biayalain'));
-        /*$biaya = Biaya::select('tipe_biaya')->where('tipe_biaya','=',0)->get();
+        return view('app.detail')->with(compact('biaya','biayalain'));*/
+        $biaya = Biaya::select('tipe_biaya')->where('tipe_biaya','=',0)->get();
         $biaya1 = Biaya::select('tipe_biaya')->where('tipe_biaya','=',1)->get();
-        return view('app.biaya')->with(compact('biaya', $biaya);*/
+        return view('app.biaya')->with('biaya', $biaya);
  
     }
 
@@ -93,18 +94,22 @@ class AppController extends Controller
     }
 
     public function uu(){
-        return view('app.uu');
+        $hukum = Produk::where('tipe_produk',0)->orderBy('updated_at')->paginate(10);
+        return view('app.uu')->with('hukum', $hukum);
     }
 
     public function presiden(){
-        return view('app.presiden');
+        $hukum = Produk::where('tipe_produk',1)->orderBy('updated_at')->paginate(10);
+        return view('app.presiden')->with('hukum', $hukum);
     }
 
     public function pemerintah(){
-        return view('app.pemerintah');
+        $hukum = Produk::where('tipe_produk',2)->orderBy('updated_at')->paginate(10);
+        return view('app.pemerintah')->with('hukum', $hukum);
     }
 
     public function menteri(){
-        return view('app.menteri');
+        $hukum = Produk::where('tipe_produk',3)->orderBy('updated_at')->paginate(10);
+        return view('app.menteri')->with('hukum', $hukum);
     }
 }
