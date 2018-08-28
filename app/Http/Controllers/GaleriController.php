@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Galeri;
 
 class GaleriController extends Controller
 {
@@ -11,10 +12,15 @@ class GaleriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $galeri2 = Galeri::all();
-        return view('admin.galeri.index')->with('galeri2',$galeri2);
+        return view('admin.galery.index')->with('galeri2',$galeri2);
     }
 
     /**
@@ -24,7 +30,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        return view('admin.profil.create');
+        return view('admin.galery.create');
     }
 
     /**
@@ -38,34 +44,32 @@ class GaleriController extends Controller
         //rule buat data yang diupload
         // return $request->tipe_berita;
         $this->validate($request,[
-            'nama_kakanim' => 'required',
             'deskripsi' => 'required',
-            'foto_kakanim' => 'image|nullable|max:1999'
+            'data_galeri' => 'image|nullable|max:1999'
 
         ]);
-        // cek apakah data  memiliki foto 
-        if ($request->hasFile('foto_kakanim')) {
+        // cek apakah data  memiliki data 
+        if ($request->hasFile('data_galeri')) {
             // dapatkan filename dengn extension
-            $fileNameWithExt = $request->file('foto_kakanim')->getClientOriginalName();
+            $fileNameWithExt = $request->file('data_galeri')->getClientOriginalName();
             // dapatkan hanya filename saja
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             // dapatkan hanya extension saja 
-            $fileExt = $request->file('foto_kakanim')->getClientOriginalExtension();
+            $fileExt = $request->file('data_galeri')->getClientOriginalExtension();
             // nama file untuk disimpan
             $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
             // upload gambar
-            $path = $request->file('foto_kakanim')->storeAs('public/foto_kakanim',$fileNameToStore);
+            $path = $request->file('data_galeri')->storeAs('public/galeri_foto',$fileNameToStore);
         }else{
             $fileNameToStore = 'noimage.jpg';
         }
-        $kakanim = new Kakanim;
-        $kakanim->nama_kakanim = $request->input('nama_kakanim');
-        $kakanim->deskripsi = $request->input('deskripsi');
-        $kakanim->foto_kakanim = $fileNameToStore;
+        $galeri = new Galeri;
+        $galeri->deskripsi = $request->input('deskripsi');
+        $galeri->data_galeri = $fileNameToStore;
 
-        $kakanim->save();
+        $galeri->save();
 
-        return redirect('/profil')->with('success', 'Profil Kepala Kantor telah ditambahkan');
+        return redirect('/galery')->with('success', 'Foto telah ditambahkan');
     }
 
     /**
@@ -74,11 +78,11 @@ class GaleriController extends Controller
      * @param  int  $id_kakanim
      * @return \Illuminate\Http\Response
      */
-    public function show($id_kakanim)
+    public function show($id_galeri)
     {
         //
-        $kakanim = Kakanim::find($id_kakanim);
-        return view('admin.profil.show')->with('kakanim',$kakanim);
+        $galeri = Galeri::find($id_galeri);
+        return view('admin.galery.show')->with('galeri',$galeri);
     }
 
     /**
@@ -87,10 +91,10 @@ class GaleriController extends Controller
      * @param  int  $id_kakanim
      * @return \Illuminate\Http\Response
      */
-    public function edit($id_kakanim)
+    public function edit($id_galeri)
     {
-        $kakanim = Kakanim::find($id_kakanim);
-        return view('admin.profil.edit')->with('kakanim',$kakanim);
+        $galeri = Galeri::find($id_galeri);
+        return view('admin.galery.edit')->with('galeri',$galeri);
     }
 
     /**
@@ -100,41 +104,39 @@ class GaleriController extends Controller
      * @param  int  $id_kakanim
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id_kakanim)
+    public function update(Request $request, $id_galeri)
     {
            //rule buat data yang diupload
            $this->validate($request,[
-            'nama_kakanim' => 'required', 
             'deskripsi' => 'required', 
-            'foto_kakanim' => 'image|nullable|max:1999'
+            'data_galeri' => 'image|nullable|max:1999'
         ]);
         
-        $kakanim = Kakanim::find($id_kakanim);
+        $galeri = Galeri::find($id_galeri);
         // cek apakah data  memiliki foto 
-        if ($request->hasFile('foto_kakanim')) {
+        if ($request->hasFile('galeri_foto')) {
             // hapus terlebih dahulu foto sebelumnya: 
-            if(file_exists("storage/foto_kakanim/".$kakanim->foto_kakanim)){
-                unlink("storage/foto_kakanim/".$kakanim->foto_kakanim);
+            if(file_exists("storage/galeri_foto/".$galeri->data_galeri)){
+                unlink("storage/galeri_foto/".$galeri->data_galeri);
             }
             // dapatkan filename dengn extension
-            $fileNameWithExt = $request->file('foto_kakanim')->getClientOriginalName();
+            $fileNameWithExt = $request->file('data_galeri')->getClientOriginalName();
             // dapatkan hanya filename saja
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             // dapatkan hanya extension saja 
-            $fileExt = $request->file('foto_kakanim')->getClientOriginalExtension();
+            $fileExt = $request->file('data_galeri')->getClientOriginalExtension();
             // nama file untuk disimpan
             $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
             // upload gambar
-            $path = $request->file('foto_kakanim')->storeAs('public/foto_kakanim',$fileNameToStore);
+            $path = $request->file('data_galeri')->storeAs('public/galeri_foto',$fileNameToStore);
         }
-        $kakanim->nama_kakanim = $request->input('nama_kakanim');
-        $kakanim->deskripsi = $request->input('deskripsi');
-        if ($request->hasFile('foto_kakanim')) {
-            $kakanim->foto_kakanim = $fileNameToStore;
+        $galeri->deskripsi = $request->input('deskripsi');
+        if ($request->hasFile('galeri_foto')) {
+            $galeri->data_galeri = $fileNameToStore;
 
         }
-        $kakanim->save();
-        return redirect('/profil')->with('success', 'Profil Kepala Kantor telah diperbaharui');
+        $galeri->save();
+        return redirect('/galery')->with('success', 'Foto telah diperbaharui');
     }
 
     /**
@@ -143,16 +145,16 @@ class GaleriController extends Controller
      * @param  int  $id_kakanim
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_kakanim)
+    public function destroy($id_galeri)
     {
                 //
-        $kakanim = Kakanim::find($id_kakanim);
-        if(file_exists("storage/foto_kakanim/".$kakanim->foto_kakanim)){
-            unlink("storage/foto_kakanim/".$kakanim->foto_kakanim);
-            $kakanim->delete();
-            return redirect('/profil')->with('success', 'Berita telah dihapus');
+        $galeri = Galeri::find($id_galeri);
+        if(file_exists("storage/galeri_foto/".$galeri->data_galeri)){
+            unlink("storage/galeri_foto/".$galeri->data_galeri);
+            $galeri->delete();
+            return redirect('/galery')->with('success', 'Foto telah dihapus');
         }else{
-            return $kakanim->foto_kakanim." - Tidak ada file tersebut";
+            return $galeri->data_galeri." - Tidak ada file tersebut";
         }
     }
 }

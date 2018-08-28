@@ -19,8 +19,12 @@ Auth::routes();
 Route::resource('berita', 'BeritaController');
 // untuk CRUD biaya
 Route::resource('biayaimigrasi', 'BiayaController');
+// untuk CRUD Indeks Kepuasan
+Route::resource('ikm', 'KepuasanController');
 // untuk CRUD produk hukum
 Route::resource('produkhukum', 'ProdukhukumController');
+// untuk CRUD produk Galeri
+Route::resource('galery', 'GaleriController');
 // untuk CRUD pengaduan
 Route::resource('pengaduan', 'PengaduanController');
 // untuk cek pengaduan
@@ -50,3 +54,7 @@ Route::get('/pemerintah', 'AppController@pemerintah')->name('pemerintah');
 Route::get('/menteri', 'AppController@menteri')->name('menteri');
 Route::get('/beritautama/{berita}', 'AppController@detail')->name('detail utama');
 Route::get('/beritaimigrasi/{berita}', 'AppController@detail')->name('detail imigrasi');
+Route::get('/uu/{produk}', 'AppController@uraian')->name('uraian uu');
+Route::get('/presiden/{produk}', 'AppController@uraian')->name('uraian presiden');
+Route::get('/pemerintah/{produk}', 'AppController@uraian')->name('uraian pemerintah');
+Route::get('/menteri/{produk}', 'AppController@uraian')->name('uraian menteri');

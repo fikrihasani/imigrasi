@@ -9,6 +9,10 @@ use App\Berita;
 use App\Kakanim;
 use App\Biaya;
 use App\Produk;
+use App\Bulan;
+use App\Kepuasan;
+use App\Galeri;
+
 
 class AppController extends Controller
 {
@@ -43,13 +47,6 @@ class AppController extends Controller
     }
 
     public function biaya(){
-        /*$biaya = Biaya::select($data_biaya);
-        if($biaya>tipe_biaya == 0){
-            $biayalain = Biaya::where('tipe_biaya',0)->get();
-        }else{
-            $biayalain = Biaya::where('tipe_biaya',1)->get();
-        }
-        return view('app.detail')->with(compact('biaya','biayalain'));*/
         $biaya = Biaya::where('tipe_biaya',0)->first();
         $biaya1 = Biaya::where('tipe_biaya',1)->first();
         return view('app.biaya')->with(compact('biaya', 'biaya1'));
@@ -82,11 +79,26 @@ class AppController extends Controller
     }
 
     public function galeri(){
-        return view('app.galeri');
+        $galeri = Galeri::where('id_galeri', '>', 0)->orderBy('updated_at')->paginate(10);
+        return view('app.galeri')->with('galeri', $galeri);
     }
 
+
     public function kepuasan(){
-        return view('app.kepuasan');
+ 
+        $ikm = Kepuasan::where('bulan_kepuasan',0)->first();
+        $ikm1 = Kepuasan::where('bulan_kepuasan',1)->first();
+        $ikm2 = Kepuasan::where('bulan_kepuasan',2)->first();
+        $ikm3 = Kepuasan::where('bulan_kepuasan',3)->first();
+        $ikm4 = Kepuasan::where('bulan_kepuasan',4)->first();
+        $ikm5 = Kepuasan::where('bulan_kepuasan',5)->first();
+        $ikm6 = Kepuasan::where('bulan_kepuasan',6)->first();
+        $ikm7 = Kepuasan::where('bulan_kepuasan',7)->first();
+        $ikm8 = Kepuasan::where('bulan_kepuasan',8)->first();
+        $ikm9 = Kepuasan::where('bulan_kepuasan',9)->first();
+        $ikm10 = Kepuasan::where('bulan_kepuasan',10)->first();
+        $ikm11 = Kepuasan::where('bulan_kepuasan',11)->first();
+        return view('app.kepuasan')->with(compact('ikm', 'ikm1','ikm2','ikm3','ikm4','ikm5','ikm6','ikm7','ikm8','ikm9','ikm10','ikm11'));
     }
 
     public function statistik(){
@@ -112,4 +124,19 @@ class AppController extends Controller
         $hukum = Produk::where('tipe_produk',3)->orderBy('updated_at')->paginate(10);
         return view('app.menteri')->with('hukum', $hukum);
     }
+
+    public function uraian($id_produk){
+        $rinci = Produk::find($id_produk);
+        if($rinci->tipe_produk == 0){
+            $produklain = Produk::where('tipe_produk',0)->orderBy('updated_at')->get();
+        }else if($rinci->tipe_produk == 1){
+            $produklain = Produk::where('tipe_produk',1)->orderBy('updated_at')->get();
+        }else if($rinci->tipe_produk == 2){
+            $produklain = Produk::where('tipe_produk',2)->orderBy('updated_at')->get();
+        }else{
+            $produklain = Produk::where('tipe_produk',3)->orderBy('updated_at')->get();
+        }
+        return view('app.uraian')->with(compact('rinci','produklain'));
+    }
+
 }

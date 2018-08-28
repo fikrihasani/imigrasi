@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-
+<div class="container" style="margin-bottom: 20px">
 	<div class="row">
 		<h1 class="span12">Gallery</h1>     
       
@@ -17,91 +16,25 @@
         
         <!-- =========================Start Col right section ============================= -->
 		<section class="span8 ">
-		<div class="col-right">
-            
+			<div class="col-right">
 				<div class="row-fluid">
-					<div class=" span4 picture">
-						<a href="img/gallery/1.jpg" title="Title" class="fancybox" rel="gallery1" >
-						<span class="photo_icon"></span>
-						<img src="img/gallery/1.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/2.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/2.jpg" alt="" >
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a class="fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo" title="Video youtube"  >
-						<span class="video_icon_youtube"></span>
-						<img src="img/gallery/3.jpg" alt="">
-						</a>
-					</div>
-                    </div>
-                    
-                    <div class="row-fluid">
-					<div class="span4 picture">
-						<a class="fancybox-media" href="http://vimeo.com/36031564" title="Video Vimeo" >
-						<span class="video_icon_vimeo"></span>
-						<img src="img/gallery/4.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/5.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/5.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/6.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/6.jpg" alt="">
-						</a>
-					</div>
-                    </div>
-                    
-                    <div class="row-fluid">
-					<div class="span4 picture">
-						<a href="img/gallery/4.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/4.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/5.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/5.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/6.jpg" title="Title"class="fancybox" rel="gallery1" >
-						<span class="photo_icon"></span>
-						<img src="img/gallery/6.jpg" alt="">
-						</a>
-					</div>
-                    </div>
-                    
-                    <div class="row-fluid">
-					<div class=" span4 picture">
-						<a href="img/gallery/7.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/7.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/7.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/7.jpg" alt="">
-						</a>
-					</div>
-					<div class="span4 picture">
-						<a href="img/gallery/7.jpg" title="Title" class="fancybox" rel="gallery1">
-						<span class="photo_icon"></span>
-						<img src="img/gallery/7.jpg" alt="">
-						</a>
-					</div>
-				</div><!-- End row -->
+					@if (count($galeri) > 0)
+						@foreach ($galeri as $foto)
+								<div class=" span4 picture" class="box-style-one borders">
+									<a href="storage/galeri_foto/{{$foto->data_galeri}}" title="{{$foto->deskripsi}}"class="fancybox" rel="gallery1" >
+										<span class="photo_icon"></span>
+										<img src="storage/galeri_foto/{{$foto->data_galeri}}">
+									</a>			
+								</div><!-- End Strip course -->
+						@endforeach
+					@else
+							<center>
+								<div class="alert alert-info">
+									<h3>Maaf Belum ada Foto Kepala Kantor Imigrasi</h3>
+								</div>
+							</center>
+					@endif
+				</div>
 			</div>
 		</section><!-- end col right-->
 	</div><!-- end row-->

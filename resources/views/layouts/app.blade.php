@@ -92,44 +92,38 @@
 									</div><!-- End row -->
 									</li>
 									
-									<li id="section-2">
-									<p class="lead "><h5>VISI <em>MASYARAKAT MEMPEROLEH KEPASTIAN HUKUM</em></h5> <br/><h5>MISI <em>MELINDUNGI HAK ASASI MANUSIA</em></h5> <br/><h5>MOTTO <em>MELAYANI DENGAN TULUS</em></h5></p>
-									<hr>
-									
+									<li id="section-2">							
 									<div class="row">
-									
-										<div class="span4">
-											<h5>JANJI LAYANAN</h5>
-											<p>1.KEPASTIAN PERSYARATAN <br/>
-												2.KEPASTIAN BIAYA<br/>
-												3.KEPASTIAN WAKTU PENYELESAIAN</p>
+										<div class="span4"><p class="lead "><h5>VISI <em>MASYARAKAT MEMPEROLEH KEPASTIAN HUKUM</em></h5> </p></div>
+										<div class="span2"><p class="lead "><h5>MISI <em>MELINDUNGI HAK ASASI MANUSIA</em></h5></p></div>
+										<div class="span2"><p class="lead "><h5>MOTTO <em>MELAYANI DENGAN TULUS</em></h5></p></div>
+										<div class="span3">
+												<h5>JANJI LAYANAN</h5>
+												<p>1.KEPASTIAN PERSYARATAN <br/>
+													2.KEPASTIAN BIAYA<br/>
+													3.KEPASTIAN WAKTU PENYELESAIAN</p>
 										</div>
-									
 									</div><!-- End row -->
 									</li>
-									
+
 									 <li id="section-3">
-									<p>
-									<h4><b>Tugas</b></h4>Kantor Imigrasi Kelas I Palu mempunyai tugas melaksanakan sebagian tugas pokok dan fungsi Kementerian Hukum dan HAM di bidang Keimigrasian khususnya di wilayah kerja Kantor Imigrasi Kelas I Palu.<br/><br/>
-									<hr>
-									</p>
-									<p>
-									<h4><b>Fungsi</b></h4>
-									1. Melaksanakan tugas Keimigrasian dibidang Informasi dan Sarana Komunikasi Keimigrasian <br/>
-									2. Melaksanakan tugas Keimigrasian dibidang Lalu lintas Keimigrasian <br/>
-									3. Melaksanakan tugas Keimigrasian dibidang Status Keimigrasian <br/>
-									4. Melaksanakan tugas Keimigrasian dibidang Pengawasan dan Penindakan Keimigrasian
-									<br/><br/>
-									<hr>
-									</p>
-								   
+										<h4><b>Tugas</b></h4>
+										<div class="span10">Kantor Imigrasi Kelas I Palu mempunyai tugas melaksanakan sebagian tugas pokok dan fungsi Kementerian Hukum dan HAM di bidang Keimigrasian khususnya di wilayah kerja Kantor Imigrasi Kelas I Palu.</div><br/><br/>
+										<hr>
+										</p>
+										<p>
+										<h4><b>Fungsi</b></h4>
+										<div class="span10">
+										1. Melaksanakan tugas Keimigrasian dibidang Informasi dan Sarana Komunikasi Keimigrasian <br/>
+										2. Melaksanakan tugas Keimigrasian dibidang Lalu lintas Keimigrasian <br/>
+										3. Melaksanakan tugas Keimigrasian dibidang Status Keimigrasian <br/>
+										4. Melaksanakan tugas Keimigrasian dibidang Pengawasan dan Penindakan Keimigrasian
+										</div>
 									</li>
 									<li id="section-4">
 									<div class="row">
-									
-										<div class="span4">
-											<p><img src="#" class="img-rounded shadow" alt=""></p>
-											<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+										<div class="span8">
+											<p>Daftar kepala kantor yang memimpin Kantor Imigrasi Kelas I Palu dari Masa ke Masa</p>
 											<p><a href="{{route('kakanim')}}" class="button_red_small" title="kepala kantor">Read more</a></p>
 										</div>                                
 									</div><!-- End row -->
@@ -172,12 +166,12 @@
 									<p align="Justify">Layanan Warga Negara Asing meliputi Ijin Tinggal Kunjungan, Ijin Tinggal Terbatas, Ijin Tinggal tetap, Fasilitas Keimigrasian, Mutasi Data Orang asing</p>
 									<p><a href="{{route('wna')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span3">
+								<div class="span2">
 									<h5><a href="{{route('layananonline')}}"><i class="icon-book"></i>Layanan Online</a></h5>
 									<p align="Justify">Layanan Online Meliputi Visa Online, Pelaporan Orang Asing, Ijin Tinggal Online, Antrian Online</p>
 									<p><a href="{{route('layananonline')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span3">
+								<div class="span2">
 									<h5><a href="{{route('biaya')}}"><i class="icon-book"></i>Biaya Keimigrasian</a></h5>
 									<p align="Justify">Biaya Keimigrasian Merupakan biaya yang terkait layanan keimigrasian</p>
 									<p><a href="{{route('biaya')}}" class="button_red_small">Read more</a></p>
@@ -193,8 +187,8 @@
 				<!-- Begin Item -->
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
-						<div class="span6 "><a href="{{route('beritautama')}}" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
-						<div class="span6"><a href="{{route('beritaimigrasi')}}" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
+						<div class="span5 "><a href="{{route('beritautama')}}" title="Berita Utama"><i class="icon-book icon-3x"></i>Berita Utama </a></div>
+						<div class="span5"><a href="{{route('beritaimigrasi')}}" title="Berita Imigrasi"><i class="icon-book icon-3x"></i>Berita Imigrasi </a></div>
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
@@ -211,7 +205,7 @@
 									<p>Merupakan Produk Undang-Undang yang terkait dengan Keimigrasian</p>
 									<p><a href="{{route('uu')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span3">
+								<div class="span2">
 									<h5><a href="{{route('presiden')}}"><i class="icon-book"></i>Presiden</a></h5>
 									<p>Merupakan Peraturan Presiden terkait dengan Keimigrasian</p>
 									<p><a href="{{route('presiden')}}"class="button_red_small">Read more</a></p>
@@ -222,7 +216,7 @@
 									<p>Merupakan Peraturan Pemerintah terkait dengan Keimigrasian</p>
 									<p><a href="{{route('pemerintah')}}" class="button_red_small">Read more</a></p>
 								</div>
-								<div class="span3">
+								<div class="span2">
 									<h5><a href="{{route('menteri')}}"><i class="icon-book"></i>Menteri</a></h5>
 									<p>Merupakan Peraturan Menteri terkait dengan Keimigrasian</p>
 									<p><a href="{{route('menteri')}}" class="button_red_small">Read more</a></p>
@@ -238,9 +232,9 @@
 				<!-- Begin Item -->
 				<div class="drop-down-container" id="icon-menu">
 					<div class="row">
-						<div class="span4 "><a href="{{route('galeri')}}" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
-						<div class="span4"><a href="{{route('kepuasan')}}" title="Kepuasan Masyarakat"><i class="icon-star icon-3x"></i>Indeks Kepuasan Masyarakat </a></div>
-						<div class="span4"><a href="{{route('statistik')}}" title="Course detail"><i class="icon-list icon-3x"></i>Data Statistik</a></div>
+						<div class="span5 "><a href="{{route('galeri')}}" title="Galeri "><i class="icon-picture icon-3x"></i>Galeri Foto/ Video </a></div>
+						<div class="span5"><a href="{{route('kepuasan')}}" title="Kepuasan Masyarakat"><i class="icon-star icon-3x"></i>Indeks Kepuasan Masyarakat </a></div>
+						
 					</div><!-- End row -->
 				</div><!-- End Item Container -->
 				</li><!-- End Item -->
@@ -248,8 +242,8 @@
 					<!-- Begin Item -->
 					<div class="drop-down-container" id="icon-menu">
 						<div class="row">
-							<div class="span6 "><a href="/cekpengaduan" title="Cek Pengaduan"><i class="icon-search icon-3x"></i>Cek Pengaduan</a></div>
-							<div class="span6"><a href="/pengaduan/create" title="Buat Pengaduan"><i class="icon-book icon-3x"></i>Buat Pengaduan</a></div>
+							<div class="span5 "><a href="/cekpengaduan" title="Cek Pengaduan"><i class="icon-search icon-3x"></i>Cek Pengaduan</a></div>
+							<div class="span5"><a href="/pengaduan/create" title="Buat Pengaduan"><i class="icon-book icon-3x"></i>Buat Pengaduan</a></div>
 						</div><!-- End row -->
 					</div><!-- End Item Container -->
 					</li><!-- End Item -->
@@ -278,9 +272,10 @@
 							<div class="row">
 							
 								<div class="span3">
-									<h5>Pengaduan</h5>
-									<p>Apabila Anda menemukan kecurangan, pungli dalam pelayanan kami, silahkan laporkan melalui fitur ini</p>
-									<p><a href="{{route('contact')}}" class="button_red_small">Laporkan</a></p>
+									<h5>Layanan Kontak Whatssup</h5>
+									<p>Pengaduan : 08......</p>
+									<p>Layanan Paspor : 08......</p>
+									<p>Layanan Warga Negara Asing : 08......</p>								
 								</div>                       
 							</div><!-- End row -->
 						</div><!-- End Span6 -->
@@ -291,11 +286,13 @@
 			</ul><!-- End Mega Menu -->
 		</div>
 		</nav><!-- /navbar -->
+		
 
+		
 		{{-- konten halaman yang ditampilkan pada layout --}}
-		<div class="container" style="margin-bottom: 20px">
 			@yield('content')
-		</div>
+		
+		
 		  
 		  <footer>
 		  <div class="container">
@@ -347,8 +344,6 @@
 		 <!-- REVOLUTION SLIDER -->
 		 <script src="{{asset('rs-plugin/js/jquery.themepunch.plugins.min.js')}}"></script>
 		 <script type="text/javascript" src="{{asset('rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
-		 <script src="{{asset('js/revolutio-slider-func.js')}}"></script>
-
-		
+		 <script src="{{asset('js/revolutio-slider-func.js')}}"></script>	
     </body>
 </html>

@@ -278,7 +278,7 @@ a.button_red_medium:hover, .button_red_medium:hover, .megamenu > li .drop-down-c
 /* #Site Header
 ================================================ */
 header{
-	background-color:#2d343e;
+	background-color:#162953;
 	padding:8px 0;
 }
 #menu-top{
@@ -872,7 +872,7 @@ ul.list_4 li{background:url(../img/arrow_4.png) no-repeat 4px 6px;line-height:18
 	background: #669933;
 }
 .box-style-2.orange a:hover  {
-	background: #F60;
+	background: #1CC5E8;
 }
 .box-style-2.red a:hover  {
 	background: #ff6666;

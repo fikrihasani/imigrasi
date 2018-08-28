@@ -52,7 +52,7 @@
                             </li>
                         </a>
                         &nbsp &nbsp
-                        <a href="/galeri">
+                        <a href="/galery">
                             <li>
                                 Galeri
                             </li>
@@ -61,6 +61,18 @@
                         <a href="/produkhukum">
                             <li>
                                 Produk Hukum
+                            </li>
+                        </a>
+                        &nbsp &nbsp
+                        <a href="/pengaduan">
+                            <li>
+                                Pengaduan
+                            </li>
+                        </a>
+                        &nbsp &nbsp
+                        <a href="/ikm">
+                            <li>
+                                Kepuasan
                             </li>
                         </a>
                     </ul>

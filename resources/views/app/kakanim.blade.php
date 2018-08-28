@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container" style="margin-bottom: 20px">
     <section class="span10  ">
         <div class="col-right">
         <h2 align="center"><a>Kepala Kantor dari Masa Ke Masa</a></h2>
@@ -29,4 +30,5 @@
           @endif
             
     </section>
+</div>
 @endsection

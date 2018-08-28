@@ -16,8 +16,8 @@ CSS STRUCTURE:
 /*============================================================================================*/
 
 .megamenu_container {
-	max-width:100%;
-	height:auto;
+	width:1170px;
+	height:44px;
 	margin:0 auto;
 	position:relative;
 	z-index:2;
@@ -127,7 +127,7 @@ CSS STRUCTURE:
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-top:none;
-	background:#2d343e;
+	background:#162953;
 	display: none; 
 }
 .drop-down-container#icon-menu a {
