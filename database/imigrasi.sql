@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2018 at 07:04 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.7
+-- Generation Time: Aug 19, 2018 at 05:45 PM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,11 +29,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `berita` (
-  `foto_utama` int(20) NOT NULL,
-  `berita_utama` text NOT NULL,
-  `foto_imigrasi` int(20) NOT NULL,
-  `berita_imigrasi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(10) UNSIGNED NOT NULL,
+  `judul_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `konten_berita` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipe_berita` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id`, `judul_berita`, `foto_berita`, `konten_berita`, `tipe_berita`, `created_at`, `updated_at`) VALUES
+(3, 'Berita 1', 'image b_1533196908.jpg', 'Berita 1 euy', '0', '2018-08-02 00:53:17', '2018-08-02 01:01:48'),
+(4, 'Berita 2', 'image b_1533196473.jpg', 'Ulala', '1', '2018-08-02 00:54:33', '2018-08-02 00:54:33');
 
 -- --------------------------------------------------------
 
@@ -97,6 +108,14 @@ CREATE TABLE `migrations` (
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2018_07_16_091237_create_beritas_table', 1),
+(2, '2018_07_16_093100_create_beritas_table', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -104,11 +123,25 @@ CREATE TABLE `migrations` (
 --
 
 CREATE TABLE `pengaduan` (
+  `id` int(11) NOT NULL,
   `nama` varchar(35) NOT NULL,
   `email` varchar(40) NOT NULL,
   `subjek` varchar(60) NOT NULL,
-  `pesan` text NOT NULL
+  `pesan` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `foto_ktp` varchar(30) NOT NULL,
+  `kode_unik` varchar(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`id`, `nama`, `email`, `subjek`, `pesan`, `status`, `foto_ktp`, `kode_unik`, `created_at`, `updated_at`) VALUES
+(1, 'Fikri Hasani', 'mfikrihasani@gmail.com', 'nganu mas', 'ya gitu ya', -1, 'image b_1534232556.jpg', 'png5260', '2018-08-14 00:42:36', '2018-08-14 00:42:36'),
+(2, 'fikyun', 'fikyun@gmail.com', 'gini mas', 'gitu deh', -1, 'image a_1534237120.jpg', 'png4229', '2018-08-14 01:58:40', '2018-08-14 01:58:40');
 
 -- --------------------------------------------------------
 
@@ -174,7 +207,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'yusuf', 'yusufdwisantoso@gmail.com', '$2y$10$IybvBgAvQT60lEZTadHzWeh87rYGTE9yT1t5f69.YwkXuRj7KcCYa', 'MXIDRsNRIY5ESOSoYqs8DOdime9JYVLb1hYGIpq41YOlw11v1PAgLeiS83sW', '2018-07-13 09:45:12', '2018-07-13 09:45:12');
+(4, 'yusuf', 'yusufdwisantoso@gmail.com', '$2y$10$IybvBgAvQT60lEZTadHzWeh87rYGTE9yT1t5f69.YwkXuRj7KcCYa', 'MXIDRsNRIY5ESOSoYqs8DOdime9JYVLb1hYGIpq41YOlw11v1PAgLeiS83sW', '2018-07-13 09:45:12', '2018-07-13 09:45:12'),
+(5, 'fikri', 'mfikrihasani@gmail.com', '$2y$10$vzSIpKDIAP0J92yqq8EqxO1MhWKCdCxSZPe.r/bkJlXHMpDvCNNS.', 'eloliifpOIu9XSqOxNI07jWoSFTYUCIJ3Y1YXwkPtwCHinCXLtQh260ihO5P', '2018-07-16 01:31:36', '2018-07-16 01:31:36');
 
 -- --------------------------------------------------------
 
@@ -194,9 +228,21 @@ CREATE TABLE `visi_misi` (
 --
 
 --
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pengaduan`
+--
+ALTER TABLE `pengaduan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -210,16 +256,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pengaduan`
+--
+ALTER TABLE `pengaduan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
