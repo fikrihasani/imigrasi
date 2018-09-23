@@ -5,8 +5,9 @@
 @section('admin-content')
     <div class="container">
         <h1>
-            Data Kepuasan Masyarakat 
-            <span style="float:right">
+            Data Kepuasan Masyarakat
+            <br>
+            <span style="">
                 <a href="/ikm/create">
                     <button class="btn btn-primary">
                         Buat Data Baru
@@ -41,7 +42,7 @@
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
                     </td>
-                    <td>    
+                    <td>
                         <a href="/ikm/{{$kepuasan->id_kepuasan}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
@@ -51,7 +52,7 @@
         @else
             <center>
                 <h2>
-                    Belum Data Kepuasan 
+                    Belum Data Kepuasan
                 </h2>
             </center>
         @endif

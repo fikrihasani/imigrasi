@@ -6,7 +6,8 @@
     <div class="container">
         <h1>
             Kepala Imigrasi dari Masa ke Masa
-            <span style="float:right">
+            <br>
+            <span style="">
                 <a href="/galery/create">
                     <button class="btn btn-primary">
                         Tambahkan Kakanim
@@ -18,15 +19,16 @@
         @if (count($galeri2) > 0)
             <table class="table table-bordered">
                 <tr>
-                    <td>No</td>
-                    <td>Foto</td>
-                    <td>Deskripsi</td>
+                    <th>No</th>
+                    <th>Foto</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
                 </tr>
                 @foreach ($galeri2 as $galeri)
                     <tr>
-                    <td>{{$i}}</td>
-                    <td>{{$galeri->data_galeri}}</td>
-                    <td>{{$galeri->deskripsi}}</td>
+                    <td class="table-primary">{{$i}}</td>
+                    <td class="table-light">{{$galeri->data_galeri}}</td>
+                    <td class="table-light">{{$galeri->deskripsi}}</td>
                     <td>
                         <a href="/galery/{{$galeri->id_galeri}}/edit"><button class="btn btn-primary">Edit</button></a>
                     </td>
@@ -36,7 +38,7 @@
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
                     </td>
-                    <td>    
+                    <td>
                         <a href="/galery/{{$galeri->id_galeri}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
