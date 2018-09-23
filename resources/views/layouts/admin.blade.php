@@ -98,7 +98,9 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
+        @auth
           <p>{{ Auth::user()->name }}</p>
+        @endauth
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -133,6 +135,16 @@
           <a href="{{ url('/produkhukum') }}">
             <i class="fa fa-legal"></i>
             <span>Produk Hukum</span>
+        </li>
+        <li class="treeview">
+          <a href="{{ url('/pengaduan') }}">
+            <i class="fa fa-legal"></i>
+            <span>Pengaduan</span>
+        </li>
+        <li class="treeview">
+          <a href="{{ url('/ikm') }}">
+            <i class="fa fa-legal"></i>
+            <span>Kepuasan Masyarakat</span>
         </li>
       </ul>
     </section>
