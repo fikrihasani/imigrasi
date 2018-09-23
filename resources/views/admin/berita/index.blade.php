@@ -5,8 +5,9 @@
 @section('admin-content')
     <div class="container">
         <h1>
-            Berita-Berita Imigrasi 
-            <span style="float:right">
+            Berita-Berita Imigrasi
+            <br>
+            <span style="">
                 <a href="/berita/create">
                     <button class="btn btn-primary">
                         Buat Baru
@@ -18,11 +19,11 @@
         @if (count($berita2) > 0)
             <table class="table table-bordered">
                 <tr>
-                    <td>No</td>
-                    <td>Judul Berita</td>
-                    <td>Dibuat Pada</td>
-                    <td>Diupdate Pada</td>
-                    <td colspan="3">Aksi</td>
+                    <th>No</th>
+                    <th>Judul Berita</th>
+                    <th>Dibuat Pada</th>
+                    <th>Diupdate Pada</th>
+                    <th>Aksi</th>
                 </tr>
                 @foreach ($berita2 as $berita)
                     <tr>
@@ -39,7 +40,7 @@
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
                     </td>
-                    <td>    
+                    <td>
                         <a href="/berita/{{$berita->id}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
@@ -49,7 +50,7 @@
         @else
             <center>
                 <h2>
-                    Belum ada berita 
+                    Belum ada berita
                 </h2>
             </center>
         @endif

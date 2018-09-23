@@ -6,7 +6,8 @@
     <div class="container">
         <h1>
             Kepala Imigrasi dari Masa ke Masa
-            <span style="float:right">
+            <br>
+            <span style="">
                 <a href="/profil/create">
                     <button class="btn btn-primary">
                         Tambahkan Kakanim
@@ -18,9 +19,10 @@
         @if (count($kakanim2) > 0)
             <table class="table table-bordered">
                 <tr>
-                    <td>No</td>
-                    <td>Foto</td>
-                    <td>Deskripsi</td>
+                    <th>No</th>
+                    <th>Foto</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
                 </tr>
                 @foreach ($kakanim2 as $kakanim)
                     <tr>
@@ -36,7 +38,7 @@
                             {{Form::submit('Hapus', ['class'=>'btn btn-warning'])}}
                         {!!Form::close()!!}
                     </td>
-                    <td>    
+                    <td>
                         <a href="/profil/{{$kakanim->id_kakanim}}"><button class="btn btn-info">Lihat</button></a>
                     </td>
                     <?php $i++;?>
