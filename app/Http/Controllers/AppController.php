@@ -55,12 +55,12 @@ class AppController extends Controller
 
     public function beritautama(){
 
-        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->paginate(10);
+        $news = Berita::where('tipe_berita',1)->orderBy('updated_at')->paginate(5);
         return view('app.beritautama')->with('news', $news);
     }
 
     public function beritaimigrasi(){
-        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->paginate(10);
+        $news = Berita::where('tipe_berita',0)->orderBy('updated_at')->paginate(5);
         return view('app.beritaimigrasi')->with('news', $news);
     }
 
@@ -79,7 +79,7 @@ class AppController extends Controller
     }
 
     public function galeri(){
-        $galeri = Galeri::where('id_galeri', '>', 0)->orderBy('updated_at')->paginate(10);
+        $galeri = Galeri::where('id_galeri', '>', 0)->orderBy('updated_at')->paginate(5);
         return view('app.galeri')->with('galeri', $galeri);
     }
 
@@ -106,22 +106,22 @@ class AppController extends Controller
     }
 
     public function uu(){
-        $hukum = Produk::where('tipe_produk',0)->orderBy('updated_at')->paginate(10);
+        $hukum = Produk::where('tipe_produk',0)->orderBy('updated_at')->paginate(5);
         return view('app.uu')->with('hukum', $hukum);
     }
 
     public function presiden(){
-        $hukum = Produk::where('tipe_produk',1)->orderBy('updated_at')->paginate(10);
+        $hukum = Produk::where('tipe_produk',1)->orderBy('updated_at')->paginate(5);
         return view('app.presiden')->with('hukum', $hukum);
     }
 
     public function pemerintah(){
-        $hukum = Produk::where('tipe_produk',2)->orderBy('updated_at')->paginate(10);
+        $hukum = Produk::where('tipe_produk',2)->orderBy('updated_at')->paginate(5);
         return view('app.pemerintah')->with('hukum', $hukum);
     }
 
     public function menteri(){
-        $hukum = Produk::where('tipe_produk',3)->orderBy('updated_at')->paginate(10);
+        $hukum = Produk::where('tipe_produk',3)->orderBy('updated_at')->paginate(5);
         return view('app.menteri')->with('hukum', $hukum);
     }
 

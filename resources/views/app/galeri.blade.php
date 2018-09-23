@@ -27,6 +27,9 @@
 									</a>			
 								</div><!-- End Strip course -->
 						@endforeach
+						<div class="row justify-content-md-center">
+						{{ $galeri->links() }}
+						</div>
 					@else
 							<center>
 								<div class="alert alert-info">

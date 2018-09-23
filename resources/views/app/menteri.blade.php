@@ -22,7 +22,9 @@
                             </div>
                         </div><!-- End Strip course -->
                     @endforeach
+                    <div class="row justify-content-md-center">
                     {{ $hukum->links() }}
+                    </div>
                 @else
                     <center>
                         <div class="alert alert-info">

@@ -116,41 +116,13 @@ class PengaduanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pengaduan = Pengaduan::find($id);
         $this->validate($request,[
-            'nama' => 'required', 
-            'email' => 'required', 
-            'subjek' => 'required',
-            'pesan' => 'required',
-            'status' => 'required',
-            'foto_ktp' => 'image|nullable|max:1999'
+            'status' => 'required'
         ]);
-        
-        $berita = Berita::find($id);
-        // cek apakah data  memiliki foto 
-         // cek apakah data  memiliki foto 
-         if ($request->hasFile('foto_ktp')) {
-            // dapatkan filename dengn extension
-            $fileNameWithExt = $request->file('foto_ktp')->getClientOriginalName();
-            // dapatkan hanya filename saja
-            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-            // dapatkan hanya extension saja 
-            $fileExt = $request->file('foto_ktp')->getClientOriginalExtension();
-            // nama file untuk disimpan
-            $fileNameToStore = $fileName.'_'.time().'.'.$fileExt;
-            // upload gambar
-            $path = $request->file('foto_ktp')->storeAs('public/foto_ktp',$fileNameToStore);
-        }
-        $berita->nama = $request->input('nama');
-        $berita->email = $request->input('email');
-        $berita->subjek = $request->input('subjek');
-        $berita->pesan = $request->input('pesan');
-        $berita->status = $request->input('status');
-        if ($request->hasFile('foto_ktp')) {
-            $berita->foto_berita = $fileNameToStore;
 
-        }
-        $berita->save();
+        $pengaduan->status = $request->input('status');
+        $pengaduan->save();
         return redirect('/pengaduan')->with('success', 'Pengaduan telah diperbaharui');
     }
 

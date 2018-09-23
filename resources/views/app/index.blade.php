@@ -101,7 +101,7 @@
                              </li>
                             <!-- THE FIFTH SLIDE -->
                             <li data-transition="slideleft" data-slotamount="1" data-masterspeed="300"  data-thumb="images/thumbs/thumb2.jpg">
-                                <img src="images/slides/slide-4.jpg" alt="">
+                                <img src="images/slides/slide-4.png" alt="">
                             </li>
                                          
                     </ul>

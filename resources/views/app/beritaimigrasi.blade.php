@@ -24,7 +24,9 @@
                             </div>
                         </div><!-- End Strip course -->
                     @endforeach
+                    <div class="row justify-content-md-center">
                     {{ $news->links() }}
+                    </div>
                 @else
                     <center>
                         <div class="alert alert-info">

@@ -298,10 +298,8 @@
 		  <div class="container">
 			<div class="row">
 				<div class="span3" id="brand-footer">
-					<p><img src="#" alt=""></p>
 					<p>Copyright © 2018</p>
-					<div class="instagram"><a href="#" target="_blank" >Follow on Twitter</a></div>
-					<div class="fb"><a href="#" target="_blank">Follow on  Facebook</a></div>  
+					<a target="_blank" href="http://smallcounter.com/cc_stats/1537700613/"><img alt="map counter" border="0" src="http://smallcounter.com/online/ccc.php?id=1537700613"></a><br>    
 				</div>
 				<div class="span3" id="contacts-footer">
 					<h4>Alamat</h4>

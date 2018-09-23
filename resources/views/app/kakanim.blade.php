@@ -21,6 +21,9 @@
                         </div>
                     </div><!-- End Strip course -->
             @endforeach
+            <div class="row justify-content-md-center">
+            {{ $kepala->links() }}
+            </div>
          @else
                 <center>
                     <div class="alert alert-info">
