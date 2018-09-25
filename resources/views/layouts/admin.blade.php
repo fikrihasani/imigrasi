@@ -138,12 +138,12 @@
         </li>
         <li class="treeview">
           <a href="{{ url('/pengaduan') }}">
-            <i class="fa fa-legal"></i>
+            <i class="fa fa-bullhorn"></i>
             <span>Pengaduan</span>
         </li>
         <li class="treeview">
           <a href="{{ url('/ikm') }}">
-            <i class="fa fa-legal"></i>
+            <i class="fa fa-bar-chart"></i>
             <span>Kepuasan Masyarakat</span>
         </li>
       </ul>
