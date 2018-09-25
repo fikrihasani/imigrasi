@@ -89,6 +89,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
+  @auth
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -150,7 +151,8 @@
     </section>
     <!-- /.sidebar -->
   </aside>
-
+  @endauth
+  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
