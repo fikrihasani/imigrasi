@@ -73,7 +73,7 @@ class AppController extends Controller
         }
         return view('app.detail')->with(compact('berita','beritalain'));
     }
-   
+
     public function contact(){
         return view('app.contact');
     }

@@ -154,32 +154,11 @@
 			 <div class="row">
 				 <aside  class="span6">
                     <div class="box-style-1 ribbon borders">
-                        <h3>Foto dan Video</h3>
-						<iframe height="300" src="http://www.youtube.com/embed/pgk-719mTxM?wmode=transparent"></iframe>
+                        <h4>Channel Youtube Imigrasi Palu</h4>
+                        <iframe height="300" src="https://www.youtube.com/embed/HJJoLw-354w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <br>
-                        <div class="row-fluid">
-                            <div class=" span4 picture">
-                                <a href="img/gallery/1.jpg" title="Title" class="fancybox" rel="gallery1" >
-                                <span class="photo_icon"></span>
-                                <img src="img/gallery/1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="span4 picture">
-                                <a href="img/gallery/2.jpg" title="Title" class="fancybox" rel="gallery1">
-                                <span class="photo_icon"></span>
-                                <img src="img/gallery/2.jpg" alt="" >
-                                </a>
-                            </div>
-                            <div class="span4 picture">
-                                <a class="fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo" title="Video youtube"  >
-                                <span class="video_icon_youtube"></span>
-                                <img src="img/gallery/3.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
                     </div>    
                 </aside>
-
 
                 <aside class="span4">
                     <div class="box-style-1 ribbon borders">

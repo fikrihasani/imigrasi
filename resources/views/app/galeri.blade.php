@@ -8,9 +8,8 @@
 	<!-- =========================Start Col left section ============================= -->        
 		<aside class="span3 ">
             <div class="col-left">
-                <h4>Photo and video Gallery</h4>
-                <p>Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.</p>
-                <h6>We are looking for</h6>
+                <h4>Gallery</h4>
+                <p>Dokumentasi kegiatan dan agenda yang telah dilaksanakan oleh Kantor Imigrasi Kelas I Palu</p>
             </div>
 		</aside>
         

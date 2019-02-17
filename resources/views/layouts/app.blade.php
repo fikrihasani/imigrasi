@@ -254,11 +254,19 @@
 					<div class="row">
 					
 						<div class="span6">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.639222030405!2d119.87964738610843!3d-0.9059189403642333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bee74ad13d239%3A0xda2d3af5ffbb743e!2sKantor+Imigrasi+Kelas+I+-+Palu!5e0!3m2!1sid!2sid!4v1532348334676" height="300" frameborder="0" style="border:0" allowfullscreen>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.639222030405!2d119.87964738610843!3d-0.9059189403642333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bee74ad13d239%3A0xda2d3af5ffbb743e!2sKantor+Imigrasi+Kelas+I+-+Palu!5e0!3m2!1sid!2sid!4v1532348334676" height="390" frameborder="0" style="border:0" allowfullscreen>
                 			</iframe>
 						</div>
 						
 						<div class="span4">
+							<div class="row">
+								<div class="span4">
+									<img src="{{asset('img/kontak pelayanan.png')}}" >								
+								</div>                       
+							</div><!-- End row -->
+							<br>
+							<hr>
+
 							<h4>Alamat</h4>
 							<ul>
 								<li><i class="icon-home"></i> Jl. RA Kartini No 53, Lolu Selatan, Palu Selatan, Kota Palu, Sulawesi Tengah 94111</li>
@@ -267,17 +275,6 @@
 								<li><i class="icon-envelope"></i> Email: <a href="#">immigration.palu@gmail.com</a></li>
 							</ul>
 							<br>
-							<hr>
-							
-							<div class="row">
-							
-								<div class="span3">
-									<h5>Layanan Kontak Whatssup</h5>
-									<p>Pengaduan : 08......</p>
-									<p>Layanan Paspor : 08......</p>
-									<p>Layanan Warga Negara Asing : 08......</p>								
-								</div>                       
-							</div><!-- End row -->
 						</div><!-- End Span6 -->
 					</div><!-- End row-->
 				</div><!-- End Item Container -->
